@@ -8,7 +8,6 @@
 
 import SpriteKit
 import GameplayKit
-import MapKit
 
 class GameScene: SKScene {
     
