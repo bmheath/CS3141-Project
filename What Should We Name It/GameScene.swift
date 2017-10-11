@@ -124,7 +124,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
  
     func createPlayer() {
         player = SKSpriteNode(imageNamed: "player")
-        player.position = CGPoint(x: 96, y: 672)
+        player.position = CGPoint(x: 40, y: 40)
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
         player.physicsBody?.allowsRotation = false
         player.physicsBody?.linearDamping = 0.5
