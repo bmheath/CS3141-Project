@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PP5-Ic-5d2">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="What_Should_We_Name_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -31,19 +31,17 @@
             <objects>
                 <viewController id="PP5-Ic-5d2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WFJ-qQ-37h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37L-BX-Tqh">
-                                <rect key="frame" x="166" y="20" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37L-BX-Tqh">
+                                <rect key="frame" x="139" y="20" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIb-so-0A9">
-                                <rect key="frame" x="152" y="255" width="70" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIb-so-0A9">
+                                <rect key="frame" x="140" y="225" width="39" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="show" id="DXS-lo-gGb"/>
@@ -51,6 +49,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FIb-so-0A9" firstAttribute="centerX" secondItem="WFJ-qQ-37h" secondAttribute="centerX" id="TXq-cV-Ooz"/>
+                            <constraint firstItem="37L-BX-Tqh" firstAttribute="top" secondItem="EbN-wy-RRL" secondAttribute="top" id="ZQC-ZO-I0t"/>
+                            <constraint firstItem="FIb-so-0A9" firstAttribute="centerY" secondItem="WFJ-qQ-37h" secondAttribute="centerY" id="cFR-Cj-8yv"/>
+                            <constraint firstItem="FIb-so-0A9" firstAttribute="leading" secondItem="EbN-wy-RRL" secondAttribute="leading" constant="140" id="lvG-ag-CGN"/>
+                            <constraint firstItem="37L-BX-Tqh" firstAttribute="centerX" secondItem="WFJ-qQ-37h" secondAttribute="centerX" id="n3Z-ej-edP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EbN-wy-RRL"/>
                     </view>
                 </viewController>
