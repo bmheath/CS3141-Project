@@ -14,7 +14,6 @@
 		6FA2B14F1F82F57D00506CC8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B14E1F82F57D00506CC8 /* GameViewController.swift */; };
 		6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1501F82F57D00506CC8 /* Main.storyboard */; };
 		6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1531F82F57D00506CC8 /* Assets.xcassets */; };
-		6FA2B1571F82F57D00506CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1551F82F57D00506CC8 /* LaunchScreen.storyboard */; };
 		6FA2B1621F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1611F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift */; };
 		6FA2B16D1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */; };
 		6FB90B7B1F8D91CB0022C997 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B501F8D8C560022C997 /* background.jpg */; };
@@ -24,6 +23,7 @@
 		6FB90B7F1F8D91D90022C997 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B541F8D8C570022C997 /* player.png */; };
 		6FB90B801F8D91DC0022C997 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B5B1F8D8C570022C997 /* star.png */; };
 		6FB90B811F8D91DF0022C997 /* vortex.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B581F8D8C570022C997 /* vortex.png */; };
+		F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51334401F9025650091A18B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		6FA2B14E1F82F57D00506CC8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6FA2B1511F82F57D00506CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FA2B1531F82F57D00506CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6FA2B1561F82F57D00506CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA2B1581F82F57D00506CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA2B15D1F82F57D00506CC8 /* What Should We Name ItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What Should We Name ItTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B1611F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_Should_We_Name_ItTests.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		6FB90B5A1F8D8C570022C997 /* finish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finish.png; sourceTree = "<group>"; };
 		6FB90B5B1F8D8C570022C997 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		6FB90B5C1F8D8C580022C997 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		F51334401F9025650091A18B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +130,9 @@
 				6FA2B14E1F82F57D00506CC8 /* GameViewController.swift */,
 				6FA2B1501F82F57D00506CC8 /* Main.storyboard */,
 				6FA2B1531F82F57D00506CC8 /* Assets.xcassets */,
-				6FA2B1551F82F57D00506CC8 /* LaunchScreen.storyboard */,
 				6FA2B1581F82F57D00506CC8 /* Info.plist */,
 				6FB90B4E1F8D8B940022C997 /* Content */,
+				F51334401F9025650091A18B /* Launch Screen.storyboard */,
 			);
 			path = "What Should We Name It";
 			sourceTree = "<group>";
@@ -286,11 +286,11 @@
 				6FB90B811F8D91DF0022C997 /* vortex.png in Resources */,
 				6FB90B7C1F8D91CF0022C997 /* block.png in Resources */,
 				6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */,
+				F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */,
 				6FB90B7E1F8D91D50022C997 /* level1.txt in Resources */,
 				6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */,
 				6FB90B7B1F8D91CB0022C997 /* background.jpg in Resources */,
 				6FB90B7F1F8D91D90022C997 /* player.png in Resources */,
-				6FA2B1571F82F57D00506CC8 /* LaunchScreen.storyboard in Resources */,
 				6FB90B7D1F8D91D20022C997 /* finish.png in Resources */,
 				6FB90B801F8D91DC0022C997 /* star.png in Resources */,
 				6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */,
@@ -362,14 +362,6 @@
 				6FA2B1511F82F57D00506CC8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6FA2B1551F82F57D00506CC8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6FA2B1561F82F57D00506CC8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,11 +479,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = ELEEDE4D9D;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-mb";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,11 +495,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = ELEEDE4D9D;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-mb";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
