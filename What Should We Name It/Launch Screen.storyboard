@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,27 +16,27 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jt0-SS-sPX">
-                                <rect key="frame" x="33" y="473" width="300" height="2.5"/>
-                                <color key="tintColor" red="0.72783759719999996" green="0.18520667129999999" blue="0.1239764468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="progressTintColor" red="1" green="0.070179522253639659" blue="0.18928086524057164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="trackTintColor" red="0.72783759715025909" green="0.18520667130194493" blue="0.12397644683050063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </progressView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="Splash4" translatesAutoresizingMaskIntoConstraints="NO" id="YMl-5u-XpD">
-                                <rect key="frame" x="-2" y="23" width="375" height="647"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Splash4" translatesAutoresizingMaskIntoConstraints="NO" id="YMl-5u-XpD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fAm-Uy-hIc">
+                                <rect key="frame" x="29" y="489" width="298" height="2"/>
+                                <color key="tintColor" red="0.72783759719999996" green="0.18520667129999999" blue="0.1239764468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="progressTintColor" red="1" green="0.070179522250000001" blue="0.18928086520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.72783759719999996" green="0.18520667129999999" blue="0.1239764468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YMl-5u-XpD" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="CGa-pX-AXD"/>
+                            <constraint firstItem="fAm-Uy-hIc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="13" id="G3D-Dm-ABA"/>
                             <constraint firstItem="YMl-5u-XpD" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="L8v-Eu-Plv"/>
                             <constraint firstItem="YMl-5u-XpD" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="UoX-oG-wkC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jt0-SS-sPX" secondAttribute="trailing" constant="26" id="VsI-Q4-ewQ"/>
-                            <constraint firstItem="Jt0-SS-sPX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="17" id="XGW-bj-kDB"/>
-                            <constraint firstItem="Jt0-SS-sPX" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="454" id="kvx-Ct-YNt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fAm-Uy-hIc" secondAttribute="trailing" constant="32" id="eg2-en-ceD"/>
+                            <constraint firstItem="fAm-Uy-hIc" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="469" id="hfl-4I-0Li"/>
                             <constraint firstAttribute="bottom" secondItem="YMl-5u-XpD" secondAttribute="bottom" id="vNO-g3-heP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>

@@ -12,10 +12,15 @@ import CoreMotion
 
 enum CollisionTypes: UInt32 {
     case player = 1
+    case spike = 8
+    case finish = 0
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var player: SKSpriteNode!
+    var finish: SKSpriteNode!
+    var spike: SKSpriteNode!
+    var back: SKSpriteNode!
     var lastTouchPosition: CGPoint?
     
     var motionManager: CMMotionManager!
@@ -30,22 +35,45 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // loadLevel()
         createPlayer()
+        createFinish()
+        createSpike()
+        createBackground()
         
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
     }
     
     
- 
+    func createBackground() {
+        back = SKSpriteNode(imageNamed: "background")
+        back.position = CGPoint(x:0, y:0)
+        back.zPosition = -1
+        addChild(back)
+        
+    }
+    
     func createPlayer() {
         player = SKSpriteNode(imageNamed: "player")
         player.position = CGPoint(x: -350, y: -650)
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
+        player.zPosition = 1
         player.physicsBody?.allowsRotation = false
-        player.physicsBody?.linearDamping = 0.5
-        
-        player.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
         addChild(player)
+    }
+    
+    func createFinish() {
+        finish = SKSpriteNode(imageNamed: "Check")
+        finish.position = CGPoint(x: 315, y: 635)
+        addChild(finish)
+    }
+    
+    func createSpike() {
+        spike = SKSpriteNode(imageNamed: "Spike top")
+        spike.position = CGPoint(x: 340, y: 590)
+        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody?.isDynamic = false
+        spike.zPosition = 1
+        addChild(spike)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
