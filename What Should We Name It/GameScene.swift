@@ -10,12 +10,14 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
+// Starts an enum for different types of collisions (In Progress)
 enum CollisionTypes: UInt32 {
     case player = 1
     case spike = 8
     case finish = 0
 }
 
+//Class declares the different types of sprites along with the tilt controls for the game scene
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var player: SKSpriteNode!
     var finish: SKSpriteNode!
@@ -27,6 +29,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var isGameOver = false
     
+    //This loads the gravity function for the tilt control
+    //It aslso calls the functions needed to load the level like the sprites
     override func didMove(to view: SKView) {
         
  
@@ -43,7 +47,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         motionManager.startAccelerometerUpdates()
     }
     
-    
+    //This function creates the background
     func createBackground() {
         back = SKSpriteNode(imageNamed: "background")
         back.position = CGPoint(x:0, y:0)
@@ -52,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    //This function creates the player
     func createPlayer() {
         player = SKSpriteNode(imageNamed: "player")
         player.position = CGPoint(x: -350, y: -650)
@@ -61,12 +66,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(player)
     }
     
+    //This function creates the finish line
     func createFinish() {
         finish = SKSpriteNode(imageNamed: "Check")
         finish.position = CGPoint(x: 315, y: 635)
         addChild(finish)
     }
     
+    //This function creates one of the spikes
     func createSpike() {
         spike = SKSpriteNode(imageNamed: "Spike top")
         spike.position = CGPoint(x: 340, y: 590)
@@ -76,6 +83,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(spike)
     }
     
+    //These next 4 functions are used for the testing on the computer since
+    //tilt control cannot be tested on a computer. It uses touch as the direction you are tilting.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let location = touch.location(in: self)
@@ -98,6 +107,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         lastTouchPosition = nil
     }
     
+    //This function is for the use of tilt control and it updating in real time
+    //First prart of the if is for testing on a computer then the else is for testing on an
+    //ios device.
     override func update(_ currentTime: TimeInterval) {
         guard isGameOver == false else { return }
         #if (arch(i386) || arch(x86_64))
