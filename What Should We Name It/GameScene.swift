@@ -13,8 +13,11 @@ import CoreMotion
 // Starts an enum for different types of collisions (In Progress)
 enum CollisionTypes: UInt32 {
     case player = 1
+    case SKSpriteNode_1 = 2
     case spike = 8
+    case hole = 9
     case finish = 0
+    
 }
 
 //Class declares the different types of sprites along with the tilt controls for the game scene
@@ -24,10 +27,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var spike: SKSpriteNode!
     var back: SKSpriteNode!
     var lastTouchPosition: CGPoint?
+    var scoreLabel: SKLabelNode!
+    var hole: SKSpriteNode!
+    var c1: SKSpriteNode!
+    var c2: SKSpriteNode!
+    var c3: SKSpriteNode!
     
     var motionManager: CMMotionManager!
     
     var isGameOver = false
+    
+    //Creates scoreboard
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
@@ -41,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createPlayer()
         createFinish()
         createSpike()
+        createHole()
         createBackground()
         
         motionManager = CMMotionManager()
@@ -62,6 +78,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.position = CGPoint(x: -350, y: -650)
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
         player.zPosition = 1
+        player.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
+        //player.physicsBody?.contactTestBitMask = CollisionTypes.spike.rawValue
+        player.physicsBody?.collisionBitMask = CollisionTypes.SKSpriteNode_1.rawValue
+        player.physicsBody?.collisionBitMask = CollisionTypes.spike.rawValue
         player.physicsBody?.allowsRotation = false
         addChild(player)
     }
@@ -77,11 +97,76 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createSpike() {
         spike = SKSpriteNode(imageNamed: "Spike top")
         spike.position = CGPoint(x: 340, y: 590)
+        spike.name = "Spike"
         spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
         spike.physicsBody?.isDynamic = false
+        spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        spike.physicsBody?.collisionBitMask = 0
         spike.zPosition = 1
         addChild(spike)
     }
+    
+    //This function creates a hole
+    func createHole() {
+        hole = SKSpriteNode(imageNamed: "hole")
+        hole.position = CGPoint(x: 0, y: 0)
+        hole.name = "Hole"
+        hole.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        hole.physicsBody?.isDynamic = false
+        hole.physicsBody?.categoryBitMask = CollisionTypes.hole.rawValue
+        hole.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        hole.physicsBody?.collisionBitMask = 0
+        hole.zPosition = -1
+        addChild(hole)
+    }
+    
+    //Tells if things touch eachother
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node == player {
+            playerCollided(with: contact.bodyB.node!)
+        } else if contact.bodyB.node == player {
+            playerCollided(with: contact.bodyA.node!)
+        }
+    }
+    
+    //what happens when things collide
+    func playerCollided(with node: SKNode) {
+        if node.name == "Spike" {
+            score += 1
+            let position = player.position
+            player.removeFromParent()
+            
+            c1 = SKSpriteNode(imageNamed: "crack1")
+            c1.position = position
+            addChild(c1)
+            c1.removeFromParent()
+            c2 = SKSpriteNode(imageNamed: "crack2")
+            c2.position = position
+            addChild(c2)
+            c2.removeFromParent()
+            c3 = SKSpriteNode(imageNamed: "crack2")
+            c3.position = position
+            addChild(c3)
+            c3.removeFromParent()
+            createPlayer()
+            
+            
+        } else if node.name == "Hole" {
+            player.physicsBody?.isDynamic = false
+            let move = SKAction.move(to: node.position, duration: 0.25)
+            let scale = SKAction.scale(to: 0.000001, duration: 0.5)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            player.run(sequence) { [unowned self] in
+                self.score -= 1
+                self.createPlayer()
+            }
+        } else if node.name == "Check" {
+            // next level?
+        }
+    }
+    
     
     //These next 4 functions are used for the testing on the computer since
     //tilt control cannot be tested on a computer. It uses touch as the direction you are tilting.
