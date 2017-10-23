@@ -14,6 +14,7 @@ import CoreMotion
 enum CollisionTypes: UInt32 {
     case player = 1
     case SKSpriteNode_1 = 2
+    case wall = 3
     case spike = 8
     case hole = 9
     case finish = 0
@@ -32,6 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var c1: SKSpriteNode!
     var c2: SKSpriteNode!
     var c3: SKSpriteNode!
+    var block: SKSpriteNode!
     
     var motionManager: CMMotionManager!
     
@@ -45,16 +47,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+  
+    
+    func createObstacle (x: Int  ,y: Int){
+        
+        block = SKSpriteNode(imageNamed: "block")
+        block.physicsBody = SKPhysicsBody(rectangleOf: block.size)
+        block.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
+        block.position = CGPoint(x: x, y: y)
+        block.physicsBody?.isDynamic = false
+        block.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        block.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        block.physicsBody?.collisionBitMask = 0
+        
+        block.zPosition=1
+        addChild(block)
+        
+    }
+    
+    
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
     override func didMove(to view: SKView) {
- 
+        
         scoreLabel = SKLabelNode(fontNamed: "Papyrus")
         scoreLabel.text = "Score: 0"
         scoreLabel.horizontalAlignmentMode = .left
         scoreLabel.position = CGPoint(x: -360, y: 640)
         addChild(scoreLabel)
- 
+        
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
         
@@ -64,6 +85,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createSpike()
         createHole()
         createBackground()
+        
+        createObstacle(x: 200, y: 200)
+        createObstacle(x: -200, y: 200)
+        createObstacle(x: 200, y: -200)
+        createObstacle(x: -200, y: -200)
+        
+        //draw rectangle
+        
+        //    var x = -200
+        //    var y = -200
+        //    while (x <= 200) {
+        //    y = -200
+        //    while (y <= 200){
+        //        createObstacle(x: x, y: y)
+        //       y += 75
+        //    }
+        //       x += 75
+        //    }
+        //
+    
         
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
@@ -216,3 +257,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
 }
+
