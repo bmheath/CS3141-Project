@@ -35,6 +35,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var motionManager: CMMotionManager!
     
+    
     var isGameOver = false
     
     //Creates scoreboard
@@ -47,7 +48,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
     override func didMove(to view: SKView) {
-        
+ 
+        scoreLabel = SKLabelNode(fontNamed: "Papyrus")
+        scoreLabel.text = "Score: 0"
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.position = CGPoint(x: -360, y: 640)
+        addChild(scoreLabel)
  
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
@@ -67,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createBackground() {
         back = SKSpriteNode(imageNamed: "background")
         back.position = CGPoint(x:0, y:0)
-        back.zPosition = -1
+        back.zPosition = -2
         addChild(back)
         
     }
@@ -136,7 +142,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score += 1
             let position = player.position
             player.removeFromParent()
-            
             c1 = SKSpriteNode(imageNamed: "crack1")
             c1.position = position
             addChild(c1)
