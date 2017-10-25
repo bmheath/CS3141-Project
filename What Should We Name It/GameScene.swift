@@ -48,7 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
   
-    
+  
     func createObstacle (x: Int  ,y: Int){
         
         block = SKSpriteNode(imageNamed: "block")
@@ -78,6 +78,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
+        
+        // Set the file path
+        
+        let path = "level1.txt"
+        
+        do {
+            // Get the contents
+            let contents = try String(contentsOfFile: path, encoding: .utf8)
+            print(contents)
+        }
+        catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
+        
         
         // loadLevel()
         createPlayer()
