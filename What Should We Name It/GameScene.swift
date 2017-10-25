@@ -82,11 +82,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Set the file path
         
         let path = "level1.txt"
+        let contents = try String(contentsOfFile: path, encoding: .utf8)
         
         do {
             // Get the contents
-            let contents = try String(contentsOfFile: path, encoding: .utf8)
-            print(contents)
+            let levelPath = Bundle.main.path(forResource: "level1", ofType: "txt")
+            let levelString = try? String(contentsOfFile: levelPath!)
+            let lines = levelString?.components(separatedBy: "\n")
+            print(levelString)
         }
         catch let error as NSError {
             print("Ooops! Something went wrong: \(error)")
