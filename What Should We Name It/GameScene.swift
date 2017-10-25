@@ -81,8 +81,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Set the file path
         
-        let path = "level1.txt"
-        let contents = try String(contentsOfFile: path, encoding: .utf8)
         
         do {
             // Get the contents
@@ -199,20 +197,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if node.name == "Spike" {
             score += 1
             let position = player.position
+            let scale = SKAction.scale(to: 1, duration: 0.25)
+            let scale2 = SKAction.scale(to: 1, duration: 0.5)
             player.removeFromParent()
             c1 = SKSpriteNode(imageNamed: "crack1")
             c1.position = position
+            c1.zPosition = 3
             addChild(c1)
-            c1.removeFromParent()
-            c2 = SKSpriteNode(imageNamed: "crack2")
-            c2.position = position
-            addChild(c2)
-            c2.removeFromParent()
-            c3 = SKSpriteNode(imageNamed: "crack2")
-            c3.position = position
-            addChild(c3)
-            c3.removeFromParent()
-            createPlayer()
+            c1.run(scale) { [unowned self] in
+                self.c1.removeFromParent()
+                self.c2 = SKSpriteNode(imageNamed: "crack2")
+                self.c2.position = position
+                self.c2.zPosition = 4
+                self.addChild(self.c2)
+                self.c2.run(scale) { [unowned self] in
+                    self.c2.removeFromParent()
+                    self.c3 = SKSpriteNode(imageNamed: "crack3")
+                    self.c3.position = position
+                    self.c3.zPosition = 5
+                    self.addChild(self.c3)
+                    self.c3.run(scale2) { [unowned self] in
+                        self.c3.removeFromParent()
+                       self.createPlayer()
+                    }
+                }
+            }
+            
+            
             
             
         } else if node.name == "Hole" {
