@@ -125,6 +125,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         motionManager.startAccelerometerUpdates()
     }
     
+    func newLevel() {
+        back.removeFromParent()
+    }
+    
     //This function creates the background
     func createBackground() {
         back = SKSpriteNode(imageNamed: "background")
@@ -152,6 +156,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createFinish() {
         finish = SKSpriteNode(imageNamed: "Check")
         finish.position = CGPoint(x: 315, y: 635)
+        finish.name = "Check"
+        finish.physicsBody = SKPhysicsBody(rectangleOf: finish.size)
+        finish.physicsBody?.isDynamic = false
+        finish.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        finish.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        finish.physicsBody?.collisionBitMask = 0
+        finish.zPosition = 1
         addChild(finish)
     }
     
@@ -237,7 +248,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.createPlayer()
             }
         } else if node.name == "Check" {
-            // next level?
+            player.physicsBody?.isDynamic = false
+            let move = SKAction.move(to: node.position, duration: 0.25)
+            let scale = SKAction.scale(to: 0.000001, duration: 0.5)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            player.run(sequence) {[unowned self] in
+                self.score += 1
+                self.newLevel()
+                self.createPlayer()
+            }
         }
     }
     
