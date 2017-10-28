@@ -47,24 +47,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-  
-  
-    func createObstacle (x: Int  ,y: Int){
-        
-        block = SKSpriteNode(imageNamed: "block")
-        block.physicsBody = SKPhysicsBody(rectangleOf: block.size)
-        block.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
-        block.position = CGPoint(x: x, y: y)
-        block.physicsBody?.isDynamic = false
-        block.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
-        block.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
-        block.physicsBody?.collisionBitMask = 0
-        
-        block.zPosition=1
-        addChild(block)
-        
-    }
-    
     
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
@@ -81,50 +63,52 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Set the file path
         
-        let path = "level1.txt"
-        let contents = try String(contentsOfFile: path, encoding: .utf8)
         
-        do {
-            // Get the contents
-            let levelPath = Bundle.main.path(forResource: "level1", ofType: "txt")
-            let levelString = try? String(contentsOfFile: levelPath!)
-            let lines = levelString?.components(separatedBy: "\n")
-            print(levelString)
-        }
-        catch let error as NSError {
-            print("Ooops! Something went wrong: \(error)")
-        }
-        
-        
+        buildLevel()
+
         // loadLevel()
-        createPlayer()
-        createFinish()
-        createSpike()
-        createHole()
+//         createPlayer()
+//        createFinish()
+//        createSpike()
+//        createHole()
         createBackground()
         
-        createObstacle(x: 200, y: 200)
-        createObstacle(x: -200, y: 200)
-        createObstacle(x: 200, y: -200)
-        createObstacle(x: -200, y: -200)
-        
-        //draw rectangle
-        
-        //    var x = -200
-        //    var y = -200
-        //    while (x <= 200) {
-        //    y = -200
-        //    while (y <= 200){
-        //        createObstacle(x: x, y: y)
-        //       y += 75
-        //    }
-        //       x += 75
-        //    }
-        //
+
     
         
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
+    }
+    
+    func buildLevel() {
+        let levelPath = Bundle.main.path(forResource: "level1", ofType: "txt")
+        let levelString = try? String(contentsOfFile: levelPath!)
+        let lines = levelString?.components(separatedBy: "\n")
+        
+        var y = 640
+        
+        for line in lines! {
+            var x = -340
+            for c in line{
+                 switch c {
+                case "x":
+                    createObstacle(x: x, y: y)
+                case "o":
+                    createHole(x: x, y: y)
+                 case "p":
+                    createPlayer(x: x, y: y)
+                case " ":
+                    print("_", terminator: "")
+                case "n":
+                    print("newline")
+                    break
+                default:
+                    print("done")
+                }
+                x += 75
+            }
+            y -= 75;
+        }
     }
     
     //This function creates the background
@@ -137,9 +121,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //This function creates the player
-    func createPlayer() {
+    func createPlayer(x: Int  ,y: Int) {
         player = SKSpriteNode(imageNamed: "player")
-        player.position = CGPoint(x: -350, y: -650)
+        player.position = CGPoint(x: x, y: y)
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
         player.zPosition = 1
         player.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
@@ -171,12 +155,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(spike)
     }
     
+    func createObstacle (x: Int  ,y: Int){
+        
+        block = SKSpriteNode(imageNamed: "block")
+        block.physicsBody = SKPhysicsBody(rectangleOf: block.size)
+        block.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
+        block.position = CGPoint(x: x, y: y)
+        block.physicsBody?.isDynamic = false
+        block.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        block.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        block.physicsBody?.collisionBitMask = 0
+        
+        block.zPosition=1
+        addChild(block)
+        
+    }
+    
+    
     //This function creates a hole
-    func createHole() {
+    func createHole(x: Int  ,y: Int) {
         hole = SKSpriteNode(imageNamed: "hole")
-        hole.position = CGPoint(x: 0, y: 0)
+        hole.position = CGPoint(x: x, y: y)
         hole.name = "Hole"
-        hole.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        hole.physicsBody = SKPhysicsBody(rectangleOf: hole.size)
         hole.physicsBody?.isDynamic = false
         hole.physicsBody?.categoryBitMask = CollisionTypes.hole.rawValue
         hole.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -212,7 +213,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             c3.position = position
             addChild(c3)
             c3.removeFromParent()
-            createPlayer()
+            createPlayer(x: -340,y: 640)
             
             
         } else if node.name == "Hole" {
@@ -223,7 +224,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) { [unowned self] in
                 self.score -= 1
-                self.createPlayer()
+            self.createPlayer(x: -340,y: 640)
             }
         } else if node.name == "Check" {
             // next level?
