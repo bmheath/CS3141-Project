@@ -138,6 +138,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createFinish() {
         finish = SKSpriteNode(imageNamed: "Check")
         finish.position = CGPoint(x: 315, y: 635)
+        finish.name = "Check"
+        finish.physicsBody = SKPhysicsBody(rectangleOf: finish.size)
+        finish.physicsBody?.isDynamic = false
+        finish.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        finish.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        finish.physicsBody?.collisionBitMask = 0
+        finish.zPosition = 1
         addChild(finish)
     }
     
@@ -200,9 +207,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if node.name == "Spike" {
             score += 1
             let position = player.position
+            let scale = SKAction.scale(to: 1, duration: 0.25)
+            let scale2 = SKAction.scale(to: 1, duration: 0.5)
             player.removeFromParent()
             c1 = SKSpriteNode(imageNamed: "crack1")
             c1.position = position
+            c1.zPosition = 3
             addChild(c1)
             c1.removeFromParent()
             c2 = SKSpriteNode(imageNamed: "crack2")
@@ -227,7 +237,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.createPlayer(x: -340,y: 640)
             }
         } else if node.name == "Check" {
-            // next level?
+            player.physicsBody?.isDynamic = false
+            let move = SKAction.move(to: node.position, duration: 0.25)
+            let scale = SKAction.scale(to: 0.000001, duration: 0.5)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            player.run(sequence) {[unowned self] in
+                self.score += 1
+                self.newLevel()
+                self.createPlayer()
+            }
         }
     }
     
