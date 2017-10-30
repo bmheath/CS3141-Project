@@ -92,7 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Set the file path
         
         
-        buildLevel()
+        buildLevel(level: "level2")
 
         // loadLevel()
 //         createPlayer()
@@ -108,13 +108,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         motionManager.startAccelerometerUpdates()
     }
     
-    func buildLevel() {
-        let levelPath = Bundle.main.path(forResource: "level1", ofType: "txt")
+    func buildLevel(level: String) {
+        let levelPath = Bundle.main.path(forResource: level, ofType: "txt")
         let levelString = try? String(contentsOfFile: levelPath!)
         let lines = levelString?.components(separatedBy: "\n")
+      
+                // x -> 680
+                // y -> 1280
         
         var y = 640
-        
+
         for line in lines! {
             var x = -340
             for c in line{

@@ -20,7 +20,7 @@
 		6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1531F82F57D00506CC8 /* Assets.xcassets */; };
 		6FA2B1621F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1611F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift */; };
 		6FA2B16D1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */; };
-		6FB90B7E1F8D91D50022C997 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B571F8D8C570022C997 /* level1.txt */; };
+		6FB90B7E1F8D91D50022C997 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B571F8D8C570022C997 /* level2.txt */; };
 		6FCEBF7F1F9E51590034049A /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCEBF7E1F9E51590034049A /* Check.png */; };
 		6FD6B1091F9E4BCA0011B800 /* crack1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6B1051F9E4BCA0011B800 /* crack1.png */; };
 		6FD6B10A1F9E4BCA0011B800 /* crack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6B1061F9E4BCA0011B800 /* crack2.png */; };
@@ -70,7 +70,7 @@
 		6FA2B1681F82F57D00506CC8 /* What Should We Name ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What Should We Name ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_Should_We_Name_ItUITests.swift; sourceTree = "<group>"; };
 		6FA2B16E1F82F57D00506CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FB90B571F8D8C570022C997 /* level1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		6FB90B571F8D8C570022C997 /* level2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		6FCEBF7E1F9E51590034049A /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
 		6FD6B1051F9E4BCA0011B800 /* crack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crack1.png; sourceTree = "<group>"; };
 		6FD6B1061F9E4BCA0011B800 /* crack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crack2.png; sourceTree = "<group>"; };
@@ -115,6 +115,7 @@
 				6FA2B1601F82F57D00506CC8 /* What Should We Name ItTests */,
 				6FA2B16B1F82F57D00506CC8 /* What Should We Name ItUITests */,
 				6FA2B1441F82F57D00506CC8 /* Products */,
+				C61FE0221FA789E70079416A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +132,6 @@
 		6FA2B1451F82F57D00506CC8 /* What Should We Name It */ = {
 			isa = PBXGroup;
 			children = (
-				C66813711FA0E9E200627B7B /* level1.txt */,
 				6FA2B14A1F82F57D00506CC8 /* Actions.sks */,
 				6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */,
 				6FA2B1481F82F57D00506CC8 /* GameScene.sks */,
@@ -179,9 +179,17 @@
 				6FD6B1071F9E4BCA0011B800 /* crack3.png */,
 				6FD6B1081F9E4BCA0011B800 /* hole.png */,
 				6FDBE1EA1F969EBF0060D1DE /* background.png */,
-				6FB90B571F8D8C570022C997 /* level1.txt */,
+				6FB90B571F8D8C570022C997 /* level2.txt */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		C61FE0221FA789E70079416A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C66813711FA0E9E200627B7B /* level1.txt */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +311,7 @@
 				F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */,
 				6F07F8881FA7841E0001888A /* Spike bottom.png in Resources */,
 				6F07F8871FA7841E0001888A /* Spike left.png in Resources */,
-				6FB90B7E1F8D91D50022C997 /* level1.txt in Resources */,
+				6FB90B7E1F8D91D50022C997 /* level2.txt in Resources */,
 				C6707B611F9E5472005043B3 /* block.png in Resources */,
 				6FCEBF7F1F9E51590034049A /* Check.png in Resources */,
 				6FD6B10C1F9E4BCA0011B800 /* hole.png in Resources */,
