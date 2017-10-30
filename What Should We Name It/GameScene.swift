@@ -82,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Set the file path
         
         
-        buildLevel(level: "level1")
+        buildLevel(level: "level2")
 
         // loadLevel()
 //         createPlayer()
@@ -102,9 +102,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let levelPath = Bundle.main.path(forResource: level, ofType: "txt")
         let levelString = try? String(contentsOfFile: levelPath!)
         let lines = levelString?.components(separatedBy: "\n")
+      
+                // x -> 680
+                // y -> 1280
         
         var y = 640
-        
+
         for line in lines! {
             var x = -340
             for c in line{

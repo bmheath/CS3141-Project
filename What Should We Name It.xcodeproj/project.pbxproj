@@ -115,6 +115,7 @@
 				6FA2B1601F82F57D00506CC8 /* What Should We Name ItTests */,
 				6FA2B16B1F82F57D00506CC8 /* What Should We Name ItUITests */,
 				6FA2B1441F82F57D00506CC8 /* Products */,
+				C61FE0221FA789E70079416A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,11 +179,17 @@
 				6FD6B1071F9E4BCA0011B800 /* crack3.png */,
 				6FD6B1081F9E4BCA0011B800 /* hole.png */,
 				6FDBE1EA1F969EBF0060D1DE /* background.png */,
-				6FDBE1E71F969DFB0060D1DE /* Spike top.png */,
-				C66813711FA0E9E200627B7B /* level1.txt */,
 				6FB90B571F8D8C570022C997 /* level2.txt */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		C61FE0221FA789E70079416A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C66813711FA0E9E200627B7B /* level1.txt */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,8 +309,9 @@
 				6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */,
 				6FD6B10A1F9E4BCA0011B800 /* crack2.png in Resources */,
 				F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */,
+				6F07F8881FA7841E0001888A /* Spike bottom.png in Resources */,
+				6F07F8871FA7841E0001888A /* Spike left.png in Resources */,
 				6FB90B7E1F8D91D50022C997 /* level2.txt in Resources */,
-				6F5E8FDB1F96A1FD004E0841 /* Spike right.png in Resources */,
 				C6707B611F9E5472005043B3 /* block.png in Resources */,
 				6FCEBF7F1F9E51590034049A /* Check.png in Resources */,
 				6FD6B10C1F9E4BCA0011B800 /* hole.png in Resources */,
@@ -495,11 +503,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = XKS4D4KVXM;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-js";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,11 +519,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = XKS4D4KVXM;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-js";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
