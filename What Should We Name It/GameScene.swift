@@ -39,6 +39,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var c3: SKSpriteNode!
     var block: SKSpriteNode!
     
+    var SKSpriteNode_1 = SKSpriteNode()
+    var SKSpriteNode_2 = SKSpriteNode()
+    var SKSpriteNode_3 = SKSpriteNode()
+    var SKSpriteNode_4 = SKSpriteNode()
+    
     var motionManager: CMMotionManager!
     
     
@@ -61,6 +66,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
     override func didMove(to view: SKView) {
+        
+        SKSpriteNode_1 = self.childNode(withName: "SKSpriteNode_1") as! SKSpriteNode
+        SKSpriteNode_2 = self.childNode(withName: "SKSpriteNode_2") as! SKSpriteNode
+        SKSpriteNode_3 = self.childNode(withName: "SKSpriteNode_3") as! SKSpriteNode
+        SKSpriteNode_4 = self.childNode(withName: "SKSpriteNode_4") as! SKSpriteNode
         
         scoreLabel = SKLabelNode(fontNamed: "Papyrus")
         scoreLabel.text = "Score: 0"
@@ -334,7 +344,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) {[unowned self] in
                 self.score += 1
-                //self.newLevel()
+                self.level += 1
+                self.removeAllChildren()
+                self.addChild(self.SKSpriteNode_1)
+                self.addChild(self.SKSpriteNode_2)
+                self.addChild(self.SKSpriteNode_3)
+                self.addChild(self.SKSpriteNode_4)
                 self.createPlayer(x: playerX,y: playerY)
             }
         }
