@@ -10,6 +10,9 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
+var playerX = 0;
+var playerY = 0;
+
 // Starts an enum for different types of collisions (In Progress)
 enum CollisionTypes: UInt32 {
     case player = 1
@@ -56,6 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.text = "Score: 0"
         scoreLabel.horizontalAlignmentMode = .left
         scoreLabel.position = CGPoint(x: -360, y: 640)
+        scoreLabel.zPosition=100
         addChild(scoreLabel)
         
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
@@ -91,17 +95,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var x = -340
             for c in line{
                  switch c {
+                    
                 case "x":
                     createObstacle(x: x, y: y)
+                    
                 case "o":
                     createHole(x: x, y: y)
+                    
+                 case "s":
+                    createSpike(x: x, y: y)
+                    
+                 case "f":
+                    createFinish(x: x, y: y)
+                    
                  case "p":
+                    playerX = x
+                    playerY = y
                     createPlayer(x: x, y: y)
+                    
                 case " ":
                     print("_", terminator: "")
+                    
                 case "n":
                     print("newline")
                     break
+                    
                 default:
                     print("done")
                 }
@@ -135,9 +153,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //This function creates the finish line
-    func createFinish() {
+    func createFinish(x: Int  ,y: Int) {
         finish = SKSpriteNode(imageNamed: "Check")
-        finish.position = CGPoint(x: 315, y: 635)
+        finish.position = CGPoint(x: x, y: y)
         finish.name = "Check"
         finish.physicsBody = SKPhysicsBody(rectangleOf: finish.size)
         finish.physicsBody?.isDynamic = false
@@ -149,9 +167,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //This function creates one of the spikes
-    func createSpike() {
+    func createSpike(x: Int  ,y: Int) {
         spike = SKSpriteNode(imageNamed: "Spike top")
-        spike.position = CGPoint(x: 340, y: 590)
+        spike.position = CGPoint(x: x, y: y)
         spike.name = "Spike"
         spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
         spike.physicsBody?.isDynamic = false
@@ -214,16 +232,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             c1.position = position
             c1.zPosition = 3
             addChild(c1)
-            c1.removeFromParent()
-            c2 = SKSpriteNode(imageNamed: "crack2")
-            c2.position = position
-            addChild(c2)
-            c2.removeFromParent()
-            c3 = SKSpriteNode(imageNamed: "crack2")
-            c3.position = position
-            addChild(c3)
-            c3.removeFromParent()
-            createPlayer(x: -340,y: 640)
+            c1.run(scale) { [unowned self] in
+                self.c1.removeFromParent()
+                self.c2 = SKSpriteNode(imageNamed: "crack2")
+                self.c2.position = position
+                self.c2.zPosition = 4
+                self.addChild(self.c2)
+                self.c2.run(scale) { [unowned self] in
+                    self.c2.removeFromParent()
+                    self.c3 = SKSpriteNode(imageNamed: "crack3")
+                    self.c3.position = position
+                    self.c3.zPosition = 5
+                    self.addChild(self.c3)
+                    self.c3.run(scale2) { [unowned self] in
+                        self.c3.removeFromParent()
+                        self.createPlayer(x: playerX,y: playerY)
+                    }
+                }
+            }
+            
+            
             
             
         } else if node.name == "Hole" {
@@ -244,8 +272,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) {[unowned self] in
                 self.score += 1
-                self.newLevel()
-                self.createPlayer()
+                //self.newLevel()
+                self.createPlayer(x: playerX,y: playerY)
             }
         }
     }
