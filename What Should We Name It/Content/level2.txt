@@ -1,0 +1,18 @@
+p         n
+o o o o o n
+          n
+s s s s s n
+          n
+xxxx xxxxxn
+          n
+o oxxxxxxxn
+          n
+o x o x o n
+          n
+s o o s o n
+          n
+xxxxxxxo on
+s         n
+s  xxxxoxxn
+s  x     sn
+x        fn
