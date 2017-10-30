@@ -18,10 +18,10 @@ enum CollisionTypes: UInt32 {
     case player = 1
     case SKSpriteNode_1 = 2
     case wall = 3
-    case spike = 8
-    case hole = 9
-    case finish = 0
-    
+    case spike = 4
+    case hole = 5
+    case header = 6
+    case finish = 7
 }
 
 //Class declares the different types of sprites along with the tilt controls for the game scene
@@ -31,13 +31,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var spike: SKSpriteNode!
     var back: SKSpriteNode!
     var lastTouchPosition: CGPoint?
-    var scoreLabel: SKLabelNode!
+    var deathLabel: SKLabelNode!
     var levelLabel: SKLabelNode!
     var hole: SKSpriteNode!
     var c1: SKSpriteNode!
     var c2: SKSpriteNode!
     var c3: SKSpriteNode!
     var block: SKSpriteNode!
+    var header: SKSpriteNode!
     
     var SKSpriteNode_1 = SKSpriteNode()
     var SKSpriteNode_2 = SKSpriteNode()
@@ -50,9 +51,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isGameOver = false
     
     //Creates scoreboard
-    var score = 0 {
+    var death = 0 {
         didSet {
-            scoreLabel.text = "Score: \(score)"
+            deathLabel.text = "Death: \(death)"
         }
     }
     
@@ -72,12 +73,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKSpriteNode_3 = self.childNode(withName: "SKSpriteNode_3") as! SKSpriteNode
         SKSpriteNode_4 = self.childNode(withName: "SKSpriteNode_4") as! SKSpriteNode
         
-        scoreLabel = SKLabelNode(fontNamed: "Papyrus")
-        scoreLabel.text = "Score: 0"
-        scoreLabel.horizontalAlignmentMode = .left
-        scoreLabel.position = CGPoint(x: -360, y: 640)
-        scoreLabel.zPosition=100
-        addChild(scoreLabel)
+        deathLabel = SKLabelNode(fontNamed: "Papyrus")
+        deathLabel.text = "Deaths: 0"
+        deathLabel.horizontalAlignmentMode = .left
+        deathLabel.position = CGPoint(x: -360, y: 630)
+        deathLabel.zPosition=100
+        addChild(deathLabel)
         
         levelLabel = SKLabelNode(fontNamed: "Papyrus")
         levelLabel.text = "Level: 1"
@@ -92,7 +93,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Set the file path
         
         
-        buildLevel(level: "level2")
+        buildLevel(level: "level1")
 
         // loadLevel()
 //         createPlayer()
@@ -116,10 +117,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 // x -> 680
                 // y -> 1280
         
-        var y = 640
+        var y = 645
 
         for line in lines! {
-            var x = -340
+            var x = -352
             for c in line{
                  switch c {
                     
@@ -130,16 +131,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     createHole(x: x, y: y)
                     
                  case "l":
-                    createLSpike(x: x - 27, y: y)
+                    createLSpike(x: x - 18, y: y)
                     
                  case "r":
-                    createRSpike(x: x + 27, y: y)
+                    createRSpike(x: x + 18, y: y)
+                    
+                 case "h":
+                    createheader(x: x + 352, y: y)
                     
                  case "t":
-                    createTSpike(x: x, y: y + 26)
+                    createTSpike(x: x, y: y + 18)
                     
                  case "b":
-                    createBSpike(x: x, y: y - 28)
+                    createBSpike(x: x, y: y - 18)
                     
                  case "f":
                     createFinish(x: x, y: y)
@@ -159,9 +163,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 default:
                     print("done")
                 }
-                x += 75
+                x += 64
             }
-            y -= 75;
+            y -= 64;
         }
     }
     
@@ -174,6 +178,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func createheader(x: Int, y: Int) {
+        header = SKSpriteNode(imageNamed: "header")
+        header.position = CGPoint(x: x, y: y)
+        header.zPosition = 99
+        header.physicsBody = SKPhysicsBody(rectangleOf: header.size)
+        header.physicsBody?.categoryBitMask = CollisionTypes.header.rawValue
+        header.physicsBody?.isDynamic = false
+        header.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        header.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        header.physicsBody?.collisionBitMask = 0
+        addChild(header)
+    }
+    
     //This function creates the player
     func createPlayer(x: Int  ,y: Int) {
         player = SKSpriteNode(imageNamed: "player")
@@ -181,7 +198,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
         player.zPosition = 1
         player.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
-        //player.physicsBody?.contactTestBitMask = CollisionTypes.spike.rawValue
         player.physicsBody?.collisionBitMask = CollisionTypes.SKSpriteNode_1.rawValue
         player.physicsBody?.collisionBitMask = CollisionTypes.spike.rawValue
         player.physicsBody?.allowsRotation = false
@@ -298,7 +314,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //what happens when things collide
     func playerCollided(with node: SKNode) {
         if node.name == "Spike" {
-            score -= 1
+            death += 1
             let position = player.position
             let scale = SKAction.scale(to: 1, duration: 0.25)
             let scale2 = SKAction.scale(to: 1, duration: 0.5)
@@ -336,7 +352,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let remove = SKAction.removeFromParent()
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) { [unowned self] in
-                self.score -= 1
+                self.death += 1
             self.createPlayer(x: -340,y: 640)
             }
         } else if node.name == "Check" {
@@ -346,7 +362,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let remove = SKAction.removeFromParent()
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) {[unowned self] in
-                self.score += 1
+                self.death -= 5
                 self.level += 1
                 self.removeAllChildren()
                 self.addChild(self.SKSpriteNode_1)

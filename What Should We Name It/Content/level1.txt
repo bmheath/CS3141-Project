@@ -1,0 +1,22 @@
+h           n
+p x       oxn
+x x xxxxx xxn
+o   oxt   rxn
+xo  rxl xoxxn
+xxbboxb otttn
+xoxxxxx     n
+   xxoxbbbo n
+ o     xxxl n
+  rxxo  txl n
+b  oxxl     n
+xl  oxxxxbxon
+xxo rxxxxxxxn
+xxl  tttttttn
+xxl        on
+xxxbbbbbbb rn
+xxxxxxxxxx rn
+xl    o    xn
+xl xl   rxoxn
+xl xxxxxxxxxn
+xl         fn
+
