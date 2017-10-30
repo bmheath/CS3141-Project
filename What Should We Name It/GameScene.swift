@@ -32,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var back: SKSpriteNode!
     var lastTouchPosition: CGPoint?
     var scoreLabel: SKLabelNode!
+    var levelLabel: SKLabelNode!
     var hole: SKSpriteNode!
     var c1: SKSpriteNode!
     var c2: SKSpriteNode!
@@ -50,6 +51,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    var level = 1 {
+        didSet {
+            levelLabel.text = "Level: \(level)"
+        }
+    }
+    
     
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
@@ -61,6 +68,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.position = CGPoint(x: -360, y: 640)
         scoreLabel.zPosition=100
         addChild(scoreLabel)
+        
+        levelLabel = SKLabelNode(fontNamed: "Papyrus")
+        levelLabel.text = "Level: 1"
+        levelLabel.horizontalAlignmentMode = .center
+        levelLabel.position = CGPoint(x: 0, y: 640)
+        levelLabel.zPosition = 100
+        addChild(levelLabel)
         
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
@@ -102,8 +116,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 case "o":
                     createHole(x: x, y: y)
                     
-                 case "s":
-                    createSpike(x: x, y: y)
+                 case "l":
+                    createLSpike(x: x - 27, y: y)
+                    
+                 case "r":
+                    createRSpike(x: x + 27, y: y)
+                    
+                 case "t":
+                    createTSpike(x: x, y: y + 26)
+                    
+                 case "b":
+                    createBSpike(x: x, y: y - 28)
                     
                  case "f":
                     createFinish(x: x, y: y)
@@ -167,8 +190,47 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //This function creates one of the spikes
-    func createSpike(x: Int  ,y: Int) {
+    func createTSpike(x: Int  ,y: Int) {
         spike = SKSpriteNode(imageNamed: "Spike top")
+        spike.position = CGPoint(x: x, y: y)
+        spike.name = "Spike"
+        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody?.isDynamic = false
+        spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        spike.physicsBody?.collisionBitMask = 0
+        spike.zPosition = 1
+        addChild(spike)
+    }
+    
+    func createLSpike(x: Int  ,y: Int) {
+        spike = SKSpriteNode(imageNamed: "Spike left")
+        spike.position = CGPoint(x: x, y: y)
+        spike.name = "Spike"
+        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody?.isDynamic = false
+        spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        spike.physicsBody?.collisionBitMask = 0
+        spike.zPosition = 1
+        addChild(spike)
+    }
+    
+    func createRSpike(x: Int  ,y: Int) {
+        spike = SKSpriteNode(imageNamed: "Spike right")
+        spike.position = CGPoint(x: x, y: y)
+        spike.name = "Spike"
+        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody?.isDynamic = false
+        spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        spike.physicsBody?.collisionBitMask = 0
+        spike.zPosition = 1
+        addChild(spike)
+    }
+    
+    func createBSpike(x: Int  ,y: Int) {
+        spike = SKSpriteNode(imageNamed: "Spike bottom")
         spike.position = CGPoint(x: x, y: y)
         spike.name = "Spike"
         spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
@@ -223,7 +285,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //what happens when things collide
     func playerCollided(with node: SKNode) {
         if node.name == "Spike" {
-            score += 1
+            score -= 1
             let position = player.position
             let scale = SKAction.scale(to: 1, duration: 0.25)
             let scale2 = SKAction.scale(to: 1, duration: 0.5)

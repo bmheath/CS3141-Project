@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F5E8FDA1F96A1FA004E0841 /* Spike left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5E8FD71F96A1F8004E0841 /* Spike left.png */; };
-		6F5E8FDB1F96A1FD004E0841 /* Spike right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5E8FD91F96A1F8004E0841 /* Spike right.png */; };
-		6F5E8FDC1F96A201004E0841 /* Spike bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5E8FD81F96A1F8004E0841 /* Spike bottom.png */; };
+		6F07F8871FA7841E0001888A /* Spike left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8831FA7841C0001888A /* Spike left.png */; };
+		6F07F8881FA7841E0001888A /* Spike bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8841FA7841C0001888A /* Spike bottom.png */; };
+		6F07F8891FA7841E0001888A /* Spike top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8851FA7841D0001888A /* Spike top.png */; };
+		6F07F88A1FA7841E0001888A /* Spike right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8861FA7841D0001888A /* Spike right.png */; };
 		6FA2B1471F82F57D00506CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */; };
 		6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1481F82F57D00506CC8 /* GameScene.sks */; };
 		6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B14A1F82F57D00506CC8 /* Actions.sks */; };
@@ -26,7 +27,6 @@
 		6FD6B10B1F9E4BCA0011B800 /* crack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6B1071F9E4BCA0011B800 /* crack3.png */; };
 		6FD6B10C1F9E4BCA0011B800 /* hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6B1081F9E4BCA0011B800 /* hole.png */; };
 		6FDBE1D41F9124AC0060D1DE /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBE1D31F9124A80060D1DE /* player.png */; };
-		6FDBE1E81F969E010060D1DE /* Spike top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBE1E71F969DFB0060D1DE /* Spike top.png */; };
 		6FDBE1EB1F969EC50060D1DE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBE1EA1F969EBF0060D1DE /* background.png */; };
 		C66813721FA0E9E200627B7B /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66813711FA0E9E200627B7B /* level1.txt */; };
 		C6707B611F9E5472005043B3 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = C6707B601F9E5472005043B3 /* block.png */; };
@@ -51,9 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F5E8FD71F96A1F8004E0841 /* Spike left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike left.png"; sourceTree = "<group>"; };
-		6F5E8FD81F96A1F8004E0841 /* Spike bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike bottom.png"; sourceTree = "<group>"; };
-		6F5E8FD91F96A1F8004E0841 /* Spike right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike right.png"; sourceTree = "<group>"; };
+		6F07F8831FA7841C0001888A /* Spike left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike left.png"; sourceTree = "<group>"; };
+		6F07F8841FA7841C0001888A /* Spike bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike bottom.png"; sourceTree = "<group>"; };
+		6F07F8851FA7841D0001888A /* Spike top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike top.png"; sourceTree = "<group>"; };
+		6F07F8861FA7841D0001888A /* Spike right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike right.png"; sourceTree = "<group>"; };
 		6FA2B1431F82F57D00506CC8 /* What Should We Name It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Should We Name It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA2B1481F82F57D00506CC8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		6FD6B1071F9E4BCA0011B800 /* crack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crack3.png; sourceTree = "<group>"; };
 		6FD6B1081F9E4BCA0011B800 /* hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hole.png; sourceTree = "<group>"; };
 		6FDBE1D31F9124A80060D1DE /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
-		6FDBE1E71F969DFB0060D1DE /* Spike top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike top.png"; sourceTree = "<group>"; };
 		6FDBE1EA1F969EBF0060D1DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
 		C6707B601F9E5472005043B3 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
@@ -169,16 +169,16 @@
 			children = (
 				C6707B601F9E5472005043B3 /* block.png */,
 				6FDBE1D31F9124A80060D1DE /* player.png */,
-				6F5E8FD81F96A1F8004E0841 /* Spike bottom.png */,
 				6FCEBF7E1F9E51590034049A /* Check.png */,
 				6FD6B1051F9E4BCA0011B800 /* crack1.png */,
+				6F07F8841FA7841C0001888A /* Spike bottom.png */,
+				6F07F8831FA7841C0001888A /* Spike left.png */,
+				6F07F8861FA7841D0001888A /* Spike right.png */,
+				6F07F8851FA7841D0001888A /* Spike top.png */,
 				6FD6B1061F9E4BCA0011B800 /* crack2.png */,
 				6FD6B1071F9E4BCA0011B800 /* crack3.png */,
 				6FD6B1081F9E4BCA0011B800 /* hole.png */,
-				6F5E8FD71F96A1F8004E0841 /* Spike left.png */,
-				6F5E8FD91F96A1F8004E0841 /* Spike right.png */,
 				6FDBE1EA1F969EBF0060D1DE /* background.png */,
-				6FDBE1E71F969DFB0060D1DE /* Spike top.png */,
 				6FB90B571F8D8C570022C997 /* level1.txt */,
 			);
 			path = Content;
@@ -293,19 +293,19 @@
 			files = (
 				6FD6B1091F9E4BCA0011B800 /* crack1.png in Resources */,
 				6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */,
-				6F5E8FDA1F96A1FA004E0841 /* Spike left.png in Resources */,
+				6F07F88A1FA7841E0001888A /* Spike right.png in Resources */,
 				6FDBE1D41F9124AC0060D1DE /* player.png in Resources */,
 				6FD6B10B1F9E4BCA0011B800 /* crack3.png in Resources */,
 				6FDBE1EB1F969EC50060D1DE /* background.png in Resources */,
+				6F07F8891FA7841E0001888A /* Spike top.png in Resources */,
 				6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */,
 				6FD6B10A1F9E4BCA0011B800 /* crack2.png in Resources */,
 				F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */,
+				6F07F8881FA7841E0001888A /* Spike bottom.png in Resources */,
+				6F07F8871FA7841E0001888A /* Spike left.png in Resources */,
 				6FB90B7E1F8D91D50022C997 /* level1.txt in Resources */,
-				6F5E8FDB1F96A1FD004E0841 /* Spike right.png in Resources */,
 				C6707B611F9E5472005043B3 /* block.png in Resources */,
 				6FCEBF7F1F9E51590034049A /* Check.png in Resources */,
-				6FDBE1E81F969E010060D1DE /* Spike top.png in Resources */,
-				6F5E8FDC1F96A201004E0841 /* Spike bottom.png in Resources */,
 				6FD6B10C1F9E4BCA0011B800 /* hole.png in Resources */,
 				6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */,
 				C66813721FA0E9E200627B7B /* level1.txt in Resources */,
@@ -495,11 +495,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XKS4D4KVXM;
+				DEVELOPMENT_TEAM = FKN7EA73XG;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-js";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,11 +511,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XKS4D4KVXM;
+				DEVELOPMENT_TEAM = FKN7EA73XG;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-js";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

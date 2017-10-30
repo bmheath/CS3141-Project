@@ -1,19 +1,19 @@
 p         n
 x x x x x n
           n
- x x x x xn
-          n
+ x xlx x xn
+      b   n
 x x x x x n
           n
- x x x x xn
+ x xrx x xn
           n
 x x x x x n
           n
  o x o x on
           n
 xxxxxxxxx n
-s         n
-s  xxxxoxxn
-s  x     sn
+l         n
+l  xxxxoxxn
+l  x     tn
       x  fn
 
