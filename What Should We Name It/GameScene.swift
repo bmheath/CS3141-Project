@@ -67,26 +67,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //This loads the gravity function for the tilt control
     //It aslso calls the functions needed to load the level like the sprites
     override func didMove(to view: SKView) {
-        
-        SKSpriteNode_1 = self.childNode(withName: "SKSpriteNode_1") as! SKSpriteNode
-        SKSpriteNode_2 = self.childNode(withName: "SKSpriteNode_2") as! SKSpriteNode
-        SKSpriteNode_3 = self.childNode(withName: "SKSpriteNode_3") as! SKSpriteNode
-        SKSpriteNode_4 = self.childNode(withName: "SKSpriteNode_4") as! SKSpriteNode
-        
-        deathLabel = SKLabelNode(fontNamed: "Papyrus")
-        deathLabel.text = "Deaths: 0"
-        deathLabel.horizontalAlignmentMode = .left
-        deathLabel.position = CGPoint(x: -360, y: 630)
-        deathLabel.zPosition=100
-        addChild(deathLabel)
-        
-        levelLabel = SKLabelNode(fontNamed: "Papyrus")
-        levelLabel.text = "Level: 1"
-        levelLabel.horizontalAlignmentMode = .center
-        levelLabel.position = CGPoint(x: 0, y: 640)
-        levelLabel.zPosition = 100
-        addChild(levelLabel)
-        
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
         
@@ -94,16 +74,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         buildLevel(levels: "level\(level)")
-
-        // loadLevel()
-//         createPlayer()
-//        createFinish()
-//        createSpike()
-//        createHole()
-        createBackground()
         
-
-    
+        SKSpriteNode_1 = self.childNode(withName: "SKSpriteNode_1") as! SKSpriteNode
+        SKSpriteNode_2 = self.childNode(withName: "SKSpriteNode_2") as! SKSpriteNode
+        SKSpriteNode_3 = self.childNode(withName: "SKSpriteNode_3") as! SKSpriteNode
+        SKSpriteNode_4 = self.childNode(withName: "SKSpriteNode_4") as! SKSpriteNode
         
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
@@ -167,16 +142,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             y -= 64;
         }
-    }
-    
-    //This function creates the background
-    func createBackground() {
+        deathLabel = SKLabelNode(fontNamed: "Papyrus")
+        deathLabel.text = "Deaths: \(death)"
+        deathLabel.horizontalAlignmentMode = .left
+        deathLabel.position = CGPoint(x: -360, y: 630)
+        deathLabel.zPosition=100
+        addChild(deathLabel)
+        
+        levelLabel = SKLabelNode(fontNamed: "Papyrus")
+        levelLabel.text = "Level: \(level)"
+        levelLabel.horizontalAlignmentMode = .center
+        levelLabel.position = CGPoint(x: 0, y: 640)
+        levelLabel.zPosition = 100
+        addChild(levelLabel)
+        
         back = SKSpriteNode(imageNamed: "background")
         back.position = CGPoint(x:0, y:0)
         back.zPosition = -2
         addChild(back)
         
+        
+        addChild(SKSpriteNode_1)
+        addChild(SKSpriteNode_2)
+        addChild(SKSpriteNode_3)
+        addChild(SKSpriteNode_4)
+        
     }
+
     
     func createheader(x: Int, y: Int) {
         header = SKSpriteNode(imageNamed: "header")
@@ -223,7 +215,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spike = SKSpriteNode(imageNamed: "Spike top")
         spike.position = CGPoint(x: x, y: y)
         spike.name = "Spike"
-        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody = SKPhysicsBody(texture: spike.texture!, size: spike.texture!.size())
         spike.physicsBody?.isDynamic = false
         spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
         spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -236,7 +228,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spike = SKSpriteNode(imageNamed: "Spike left")
         spike.position = CGPoint(x: x, y: y)
         spike.name = "Spike"
-        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody = SKPhysicsBody(texture: spike.texture!, size: spike.texture!.size())
         spike.physicsBody?.isDynamic = false
         spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
         spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -249,7 +241,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spike = SKSpriteNode(imageNamed: "Spike right")
         spike.position = CGPoint(x: x, y: y)
         spike.name = "Spike"
-        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody = SKPhysicsBody(texture: spike.texture!, size: spike.texture!.size())
         spike.physicsBody?.isDynamic = false
         spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
         spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -262,7 +254,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spike = SKSpriteNode(imageNamed: "Spike bottom")
         spike.position = CGPoint(x: x, y: y)
         spike.name = "Spike"
-        spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
+        spike.physicsBody = SKPhysicsBody(texture: spike.texture!, size: spike.texture!.size())
         spike.physicsBody?.isDynamic = false
         spike.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
         spike.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -292,7 +284,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hole = SKSpriteNode(imageNamed: "hole")
         hole.position = CGPoint(x: x, y: y)
         hole.name = "Hole"
-        hole.physicsBody = SKPhysicsBody(rectangleOf: hole.size)
+        hole.physicsBody = SKPhysicsBody(circleOfRadius: hole.size.width / 2)
         hole.physicsBody?.isDynamic = false
         hole.physicsBody?.categoryBitMask = CollisionTypes.hole.rawValue
         hole.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -316,7 +308,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             death += 1
             let position = player.position
             let scale = SKAction.scale(to: 1, duration: 0.25)
-            let scale2 = SKAction.scale(to: 1, duration: 0.5)
             player.removeFromParent()
             c1 = SKSpriteNode(imageNamed: "crack1")
             c1.position = position
@@ -334,7 +325,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.c3.position = position
                     self.c3.zPosition = 5
                     self.addChild(self.c3)
-                    self.c3.run(scale2) { [unowned self] in
+                    self.c3.run(scale) { [unowned self] in
                         self.c3.removeFromParent()
                         self.createPlayer(x: playerX,y: playerY)
                     }
@@ -348,7 +339,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) { [unowned self] in
                 self.death += 1
-            self.createPlayer(x: -340,y: 640)
+                self.createPlayer(x: playerX,y: playerY)
             }
         } else if node.name == "Check" {
             player.physicsBody?.isDynamic = false
@@ -360,12 +351,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.death -= 5
                 self.level += 1
                 self.removeAllChildren()
-                self.addChild(self.SKSpriteNode_1)
-                self.addChild(self.SKSpriteNode_2)
-                self.addChild(self.SKSpriteNode_3)
-                self.addChild(self.SKSpriteNode_4)
-                self.createPlayer(x: playerX,y: playerY)
-                self.addChild(self.back)
                 self.buildLevel(levels: "level\(self.level)")
             }
         }
