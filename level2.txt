@@ -1,5 +1,5 @@
-h           n
-p x       oxn
+h,,,,,,,,,,,n
+p,x,,,,,,,oxn
 x x xxxxx xxn
 o   oxt   rxn
 xo  rxl xoxxn
