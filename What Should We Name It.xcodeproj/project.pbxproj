@@ -19,7 +19,8 @@
 		6F07F8EE1FA7ED960001888A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8E71FA7ED950001888A /* header.png */; };
 		6F07F8EF1FA7ED960001888A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8E81FA7ED950001888A /* player.png */; };
 		6F07F8F01FA7ED960001888A /* Spike right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8E91FA7ED950001888A /* Spike right.png */; };
-		6F07F8F21FA7EF330001888A /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8F11FA7EF330001888A /* level1.txt */; };
+		6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F34707F1FAA2AAF005C2FF8 /* level1.txt */; };
+		6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F3470801FAA2AAF005C2FF8 /* level2.txt */; };
 		6FA2B1471F82F57D00506CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */; };
 		6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1481F82F57D00506CC8 /* GameScene.sks */; };
 		6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B14A1F82F57D00506CC8 /* Actions.sks */; };
@@ -29,7 +30,6 @@
 		6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1531F82F57D00506CC8 /* Assets.xcassets */; };
 		6FA2B1621F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1611F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift */; };
 		6FA2B16D1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */; };
-		6FB90B7E1F8D91D50022C997 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90B571F8D8C570022C997 /* level2.txt */; };
 		6FDBE1EB1F969EC50060D1DE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBE1EA1F969EBF0060D1DE /* background.png */; };
 		C66813721FA0E9E200627B7B /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66813711FA0E9E200627B7B /* level1.txt */; };
 		F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51334401F9025650091A18B /* Launch Screen.storyboard */; };
@@ -65,7 +65,8 @@
 		6F07F8E71FA7ED950001888A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		6F07F8E81FA7ED950001888A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		6F07F8E91FA7ED950001888A /* Spike right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike right.png"; sourceTree = "<group>"; };
-		6F07F8F11FA7EF330001888A /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		6F34707F1FAA2AAF005C2FF8 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
+		6F3470801FAA2AAF005C2FF8 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = SOURCE_ROOT; };
 		6FA2B1431F82F57D00506CC8 /* What Should We Name It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Should We Name It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA2B1481F82F57D00506CC8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		6FA2B1681F82F57D00506CC8 /* What Should We Name ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What Should We Name ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_Should_We_Name_ItUITests.swift; sourceTree = "<group>"; };
 		6FA2B16E1F82F57D00506CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FB90B571F8D8C570022C997 /* level2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		6FDBE1EA1F969EBF0060D1DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
 		F51334401F9025650091A18B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -173,8 +173,9 @@
 			children = (
 				6FDBE1EA1F969EBF0060D1DE /* background.png */,
 				6F07F8E71FA7ED950001888A /* header.png */,
-				6F07F8F11FA7EF330001888A /* level1.txt */,
 				6F07F8E31FA7ED940001888A /* hole.png */,
+				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
+				6F3470801FAA2AAF005C2FF8 /* level2.txt */,
 				6F07F8E81FA7ED950001888A /* player.png */,
 				6F07F8E41FA7ED940001888A /* Spike bottom.png */,
 				6F07F8E61FA7ED950001888A /* Spike left.png */,
@@ -185,7 +186,6 @@
 				6F07F8DC1FA7ED8B0001888A /* crack1.png */,
 				6F07F8DD1FA7ED8B0001888A /* crack2.png */,
 				6F07F8DB1FA7ED8B0001888A /* crack3.png */,
-				6FB90B571F8D8C570022C997 /* level2.txt */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -310,15 +310,15 @@
 				6FDBE1EB1F969EC50060D1DE /* background.png in Resources */,
 				6F07F8DE1FA7ED8B0001888A /* block.png in Resources */,
 				6F07F8EB1FA7ED960001888A /* Spike bottom.png in Resources */,
+				6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */,
 				6F07F8EA1FA7ED960001888A /* hole.png in Resources */,
 				6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */,
+				6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */,
 				6F07F8EE1FA7ED960001888A /* header.png in Resources */,
 				6F07F8F01FA7ED960001888A /* Spike right.png in Resources */,
-				6F07F8F21FA7EF330001888A /* level1.txt in Resources */,
 				6F07F8ED1FA7ED960001888A /* Spike left.png in Resources */,
 				F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */,
 				6F07F8E01FA7ED8B0001888A /* crack3.png in Resources */,
-				6FB90B7E1F8D91D50022C997 /* level2.txt in Resources */,
 				6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */,
 				C66813721FA0E9E200627B7B /* level1.txt in Resources */,
 				6F07F8DF1FA7ED8B0001888A /* Check.png in Resources */,

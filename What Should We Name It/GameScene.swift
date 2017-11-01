@@ -93,7 +93,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Set the file path
         
         
-        buildLevel(level: "level1")
+        buildLevel(levels: "level\(level)")
 
         // loadLevel()
 //         createPlayer()
@@ -109,8 +109,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         motionManager.startAccelerometerUpdates()
     }
     
-    func buildLevel(level: String) {
-        let levelPath = Bundle.main.path(forResource: level, ofType: "txt")
+    func buildLevel(levels: String) {
+        let levelPath = Bundle.main.path(forResource: levels, ofType: "txt")
         let levelString = try? String(contentsOfFile: levelPath!)
         let lines = levelString?.components(separatedBy: "\n")
       
@@ -281,7 +281,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         block.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
         block.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
         block.physicsBody?.collisionBitMask = 0
-        
         block.zPosition=1
         addChild(block)
         
@@ -341,10 +340,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-            
-            
-            
-            
         } else if node.name == "Hole" {
             player.physicsBody?.isDynamic = false
             let move = SKAction.move(to: node.position, duration: 0.25)
@@ -370,6 +365,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.addChild(self.SKSpriteNode_3)
                 self.addChild(self.SKSpriteNode_4)
                 self.createPlayer(x: playerX,y: playerY)
+                self.addChild(self.back)
+                self.buildLevel(levels: "level\(self.level)")
             }
         }
     }
