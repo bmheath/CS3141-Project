@@ -32,6 +32,7 @@
 		6FA2B16D1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */; };
 		6FDBE1EB1F969EC50060D1DE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBE1EA1F969EBF0060D1DE /* background.png */; };
 		C66813721FA0E9E200627B7B /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66813711FA0E9E200627B7B /* level1.txt */; };
+		C99867C01FAA2CF000B18087 /* Template.txt in Resources */ = {isa = PBXBuildFile; fileRef = C99867BF1FAA2CF000B18087 /* Template.txt */; };
 		F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51334401F9025650091A18B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		6FA2B16E1F82F57D00506CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FDBE1EA1F969EBF0060D1DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
+		C99867BF1FAA2CF000B18087 /* Template.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Template.txt; sourceTree = "<group>"; };
 		F51334401F9025650091A18B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				6F07F8E91FA7ED950001888A /* Spike right.png */,
 				6F07F8E51FA7ED950001888A /* Spike top.png */,
 				6F07F8D91FA7ED8A0001888A /* block.png */,
+				C99867BF1FAA2CF000B18087 /* Template.txt */,
 				6F07F8DA1FA7ED8A0001888A /* Check.png */,
 				6F07F8DC1FA7ED8B0001888A /* crack1.png */,
 				6F07F8DD1FA7ED8B0001888A /* crack2.png */,
@@ -313,6 +316,7 @@
 				6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */,
 				6F07F8EA1FA7ED960001888A /* hole.png in Resources */,
 				6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */,
+				C99867C01FAA2CF000B18087 /* Template.txt in Resources */,
 				6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */,
 				6F07F8EE1FA7ED960001888A /* header.png in Resources */,
 				6F07F8F01FA7ED960001888A /* Spike right.png in Resources */,
@@ -511,14 +515,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = 535HM56T69;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,14 +531,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = 535HM56T69;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

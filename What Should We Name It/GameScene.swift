@@ -153,7 +153,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     playerY = y
                     createPlayer(x: x, y: y)
                     
-                case " ":
+                case ",":
                     print("_", terminator: "")
                     
                 case "n":
