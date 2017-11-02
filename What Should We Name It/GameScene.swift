@@ -46,7 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var SKSpriteNode_4 = SKSpriteNode()
     
     var motionManager: CMMotionManager!
-    
+
     
     var isGameOver = false
     
@@ -128,6 +128,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                  case "f":
                     createFinish(x: x, y: y)
+                
+                 case "0":
+                    back = SKSpriteNode(imageNamed: "background_wood")
+                    
+                 case "1":
+                    back = SKSpriteNode(imageNamed: "background_stone")
+                    
+                 case "2":
+                    back = SKSpriteNode(imageNamed: "background_brick")
                     
                  case "p":
                     playerX = x
@@ -162,7 +171,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         levelLabel.zPosition = 100
         addChild(levelLabel)
         
-        back = SKSpriteNode(imageNamed: "background")
+        //back = SKSpriteNode(imageNamed: "background")
         back.position = CGPoint(x:0, y:0)
         back.zPosition = -2
         addChild(back)
@@ -353,9 +362,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) { [unowned self] in
                 self.death += 1
-                //self.createPlayer(x: playerX,y: playerY)
+                self.createPlayer(x: playerX,y: playerY)
             }
-            self.createPlayer(x: playerX,y: playerY)
         } else if node.name == "Check" {
             player.physicsBody?.isDynamic = false
             let move = SKAction.move(to: node.position, duration: 0.25)
