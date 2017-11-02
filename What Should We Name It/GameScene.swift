@@ -100,8 +100,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                  switch c {
                     
                 case "x":
-                    createObstacle(x: x, y: y)
+                    createObstacle(x: x, y: y,texture:0)
+                
+                case "y":
+                    createObstacle(x: x, y: y,texture:1)
                     
+                case "z":
+                    createObstacle(x: x, y: y,texture:2)
+                
                 case "o":
                     createHole(x: x, y: y)
                     
@@ -263,9 +269,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(spike)
     }
     
-    func createObstacle (x: Int  ,y: Int){
-        
-        block = SKSpriteNode(imageNamed: "block")
+    func createObstacle (x: Int  ,y: Int , texture: Int){
+        if texture == 0 {
+            block = SKSpriteNode(imageNamed: "block")
+        }
+        else if texture == 1 {
+            block = SKSpriteNode(imageNamed: "Rock_Block")
+        }
+        else if texture == 2 {
+            block = SKSpriteNode(imageNamed: "brick")
+        }
         block.physicsBody = SKPhysicsBody(rectangleOf: block.size)
         block.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
         block.position = CGPoint(x: x, y: y)
