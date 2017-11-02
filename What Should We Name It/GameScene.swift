@@ -127,7 +127,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     createBSpike(x: x, y: y - 18)
                     
                  case "f":
-                    createFinish(x: x, y: y)
+                    createFinish(x: x, y: y ,orientation:0)
+                    
+                 case "g":
+                    createFinish(x: x, y: y ,orientation:1)
                 
                  case "0":
                     back = SKSpriteNode(imageNamed: "background_wood")
@@ -167,7 +170,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         levelLabel = SKLabelNode(fontNamed: "Papyrus")
         levelLabel.text = "Level: \(level)"
         levelLabel.horizontalAlignmentMode = .center
-        levelLabel.position = CGPoint(x: 0, y: 640)
+        levelLabel.position = CGPoint(x: 0, y: 630)
         levelLabel.zPosition = 100
         addChild(levelLabel)
         
@@ -212,8 +215,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //This function creates the finish line
-    func createFinish(x: Int  ,y: Int) {
-        finish = SKSpriteNode(imageNamed: "Check")
+    func createFinish(x: Int  ,y: Int ,orientation: Int) {
+        if orientation == 0 {
+            finish = SKSpriteNode(imageNamed: "Check")
+        }
+        else if orientation == 1 {
+            finish = SKSpriteNode(imageNamed: "Checkrotated")
+        }
         finish.position = CGPoint(x: x, y: y)
         finish.name = "Check"
         finish.physicsBody = SKPhysicsBody(rectangleOf: finish.size)
