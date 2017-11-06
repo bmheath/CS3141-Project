@@ -20,6 +20,9 @@
 		6F07F8F01FA7ED960001888A /* Spike right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8E91FA7ED950001888A /* Spike right.png */; };
 		6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F34707F1FAA2AAF005C2FF8 /* level1.txt */; };
 		6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F3470801FAA2AAF005C2FF8 /* level2.txt */; };
+		6F6771591FB0D65C007CB528 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6771581FB0D65C007CB528 /* brick.png */; };
+		6F67715B1FB0DAD2007CB528 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715A1FB0DAD2007CB528 /* ViewOne.swift */; };
+		6F67715D1FB0DADD007CB528 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715C1FB0DADD007CB528 /* ViewTwo.swift */; };
 		6FA2B1471F82F57D00506CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */; };
 		6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1481F82F57D00506CC8 /* GameScene.sks */; };
 		6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B14A1F82F57D00506CC8 /* Actions.sks */; };
@@ -33,7 +36,6 @@
 		C99867C01FAA2CF000B18087 /* Template.txt in Resources */ = {isa = PBXBuildFile; fileRef = C99867BF1FAA2CF000B18087 /* Template.txt */; };
 		C99867C41FAB7BC300B18087 /* Rock_Block.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C31FAB7BC300B18087 /* Rock_Block.png */; };
 		C99867C81FAB974800B18087 /* background_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C71FAB974800B18087 /* background_wood.png */; };
-		C99867CA1FAB994D00B18087 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C91FAB994D00B18087 /* brick.png */; };
 		C99867CD1FAB995800B18087 /* background_stone.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CB1FAB995800B18087 /* background_stone.png */; };
 		C99867CE1FAB995800B18087 /* background_brick.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CC1FAB995800B18087 /* background_brick.png */; };
 		C99867D01FAB9E2600B18087 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CF1FAB9E2600B18087 /* Check.png */; };
@@ -72,6 +74,9 @@
 		6F07F8E91FA7ED950001888A /* Spike right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike right.png"; sourceTree = "<group>"; };
 		6F34707F1FAA2AAF005C2FF8 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
 		6F3470801FAA2AAF005C2FF8 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = SOURCE_ROOT; };
+		6F6771581FB0D65C007CB528 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brick.png; path = "../../../App project stuff/brick.png"; sourceTree = "<group>"; };
+		6F67715A1FB0DAD2007CB528 /* ViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
+		6F67715C1FB0DADD007CB528 /* ViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
 		6FA2B1431F82F57D00506CC8 /* What Should We Name It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Should We Name It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA2B1481F82F57D00506CC8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -91,7 +96,6 @@
 		C99867BF1FAA2CF000B18087 /* Template.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Template.txt; sourceTree = "<group>"; };
 		C99867C31FAB7BC300B18087 /* Rock_Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock_Block.png; sourceTree = "<group>"; };
 		C99867C71FAB974800B18087 /* background_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_wood.png; sourceTree = "<group>"; };
-		C99867C91FAB994D00B18087 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brick.png; path = ../../../../Desktop/brick.png; sourceTree = "<group>"; };
 		C99867CB1FAB995800B18087 /* background_stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_stone.png; sourceTree = "<group>"; };
 		C99867CC1FAB995800B18087 /* background_brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_brick.png; sourceTree = "<group>"; };
 		C99867CF1FAB9E2600B18087 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				6FA2B14C1F82F57D00506CC8 /* GameScene.swift */,
 				6FA2B14E1F82F57D00506CC8 /* GameViewController.swift */,
 				6FA2B1501F82F57D00506CC8 /* Main.storyboard */,
+				6F67715A1FB0DAD2007CB528 /* ViewOne.swift */,
+				6F67715C1FB0DADD007CB528 /* ViewTwo.swift */,
 				6FA2B1531F82F57D00506CC8 /* Assets.xcassets */,
 				6FA2B1581F82F57D00506CC8 /* Info.plist */,
 				6FB90B4E1F8D8B940022C997 /* Content */,
@@ -189,11 +195,11 @@
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
 				6F3470801FAA2AAF005C2FF8 /* level2.txt */,
 				6F07F8E81FA7ED950001888A /* player.png */,
+				6F6771581FB0D65C007CB528 /* brick.png */,
 				6F07F8E41FA7ED940001888A /* Spike bottom.png */,
 				C99867CC1FAB995800B18087 /* background_brick.png */,
 				C99867CB1FAB995800B18087 /* background_stone.png */,
 				6F07F8E61FA7ED950001888A /* Spike left.png */,
-				C99867C91FAB994D00B18087 /* brick.png */,
 				C99867C31FAB7BC300B18087 /* Rock_Block.png */,
 				6F07F8E91FA7ED950001888A /* Spike right.png */,
 				6F07F8E51FA7ED950001888A /* Spike top.png */,
@@ -334,6 +340,7 @@
 				6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */,
 				C99867D21FAB9E3300B18087 /* Checkrotated.png in Resources */,
 				6F07F8EE1FA7ED960001888A /* header.png in Resources */,
+				6F6771591FB0D65C007CB528 /* brick.png in Resources */,
 				6F07F8F01FA7ED960001888A /* Spike right.png in Resources */,
 				6F07F8ED1FA7ED960001888A /* Spike left.png in Resources */,
 				C99867CD1FAB995800B18087 /* background_stone.png in Resources */,
@@ -349,7 +356,6 @@
 				6F07F8E21FA7ED8B0001888A /* crack2.png in Resources */,
 				6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */,
 				6F07F8EC1FA7ED960001888A /* Spike top.png in Resources */,
-				C99867CA1FAB994D00B18087 /* brick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FA2B14D1F82F57D00506CC8 /* GameScene.swift in Sources */,
+				6F67715D1FB0DADD007CB528 /* ViewTwo.swift in Sources */,
+				6F67715B1FB0DAD2007CB528 /* ViewOne.swift in Sources */,
 				6FA2B14F1F82F57D00506CC8 /* GameViewController.swift in Sources */,
 				6FA2B1471F82F57D00506CC8 /* AppDelegate.swift in Sources */,
 			);
@@ -535,7 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 535HM56T69;
+				DEVELOPMENT_TEAM = FKN7EA73XG;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -551,7 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 535HM56T69;
+				DEVELOPMENT_TEAM = FKN7EA73XG;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

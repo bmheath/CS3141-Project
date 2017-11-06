@@ -12,6 +12,7 @@ import CoreMotion
 
 var playerX = 0;
 var playerY = 0;
+let save = UserDefaults.standard
 
 // Starts an enum for different types of collisions (In Progress)
 enum CollisionTypes: UInt32 {
@@ -51,15 +52,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isGameOver = false
     
     //Creates scoreboard
-    var death = 0 {
+    var death = save.integer(forKey: "death") {
         didSet {
             deathLabel.text = "Deaths: \(death)"
+            save.set(death, forKey: "death")
+            save.set(death, forKey: "olddeath")
         }
     }
     
-    var level = 1 {
+    var level = save.integer(forKey: "level") {
         didSet {
             levelLabel.text = "Level: \(level)"
+            save.set(level, forKey: "level")
+            save.set(level, forKey: "oldlevel")
         }
     }
     
@@ -160,6 +165,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             y -= 64;
         }
+        save.set(death, forKey: "death")
+        save.set(death, forKey: "olddeath")
+        save.set(level, forKey: "level")
+        save.set(level, forKey: "oldlevel")
+        
         deathLabel = SKLabelNode(fontNamed: "Papyrus")
         deathLabel.text = "Deaths: \(death)"
         deathLabel.horizontalAlignmentMode = .left
@@ -357,11 +367,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.addChild(self.c3)
                     self.c3.run(scale) { [unowned self] in
                         self.c3.removeFromParent()
-                        //self.createPlayer(x: playerX,y: playerY)
                     }
                 }
             }
-            self.createPlayer(x: playerX, y: playerY) // Moved this so that it would not create extra balls
+            save.set(death, forKey: "death")
+            save.set(death, forKey: "olddeath")
+            self.createPlayer(x: playerX, y: playerY)
         } else if node.name == "Hole" {
             player.physicsBody?.isDynamic = false
             let move = SKAction.move(to: node.position, duration: 0.25)
@@ -372,6 +383,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.death += 1
                 self.createPlayer(x: playerX,y: playerY)
             }
+            save.set(death, forKey: "death")
+            save.set(death, forKey: "olddeath")
         } else if node.name == "Check" {
             player.physicsBody?.isDynamic = false
             let move = SKAction.move(to: node.position, duration: 0.25)
@@ -379,7 +392,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let remove = SKAction.removeFromParent()
             let sequence = SKAction.sequence([move, scale, remove])
             player.run(sequence) {[unowned self] in
-                self.death = 0
                 self.level += 1
                 self.removeAllChildren()
                 self.buildLevel(levels: "level\(self.level)")
