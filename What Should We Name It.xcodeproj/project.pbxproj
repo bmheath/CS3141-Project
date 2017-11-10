@@ -19,8 +19,7 @@
 		6F07F8EF1FA7ED960001888A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8E81FA7ED950001888A /* player.png */; };
 		6F07F8F01FA7ED960001888A /* Spike right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F07F8E91FA7ED950001888A /* Spike right.png */; };
 		6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F34707F1FAA2AAF005C2FF8 /* level1.txt */; };
-		6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F3470801FAA2AAF005C2FF8 /* level2.txt */; };
-		6F6771591FB0D65C007CB528 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6771581FB0D65C007CB528 /* brick.png */; };
+		6F3470821FAA2AAF005C2FF8 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F3470801FAA2AAF005C2FF8 /* level3.txt */; };
 		6F67715B1FB0DAD2007CB528 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715A1FB0DAD2007CB528 /* ViewOne.swift */; };
 		6F67715D1FB0DADD007CB528 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715C1FB0DADD007CB528 /* ViewTwo.swift */; };
 		6FA2B1471F82F57D00506CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */; };
@@ -33,10 +32,11 @@
 		6FA2B1621F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1611F82F57D00506CC8 /* What_Should_We_Name_ItTests.swift */; };
 		6FA2B16D1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */; };
 		C66813721FA0E9E200627B7B /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66813711FA0E9E200627B7B /* level1.txt */; };
-		C99867C01FAA2CF000B18087 /* Template.txt in Resources */ = {isa = PBXBuildFile; fileRef = C99867BF1FAA2CF000B18087 /* Template.txt */; };
+		C93F88D31FB379E50055144A /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F88D21FB379E50055144A /* brick.png */; };
+		C93F88D51FB37CE40055144A /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C93F88D41FB37CE40055144A /* level2.txt */; };
+		C93FCA061FB61BA200BE1FE7 /* background_stone.png in Resources */ = {isa = PBXBuildFile; fileRef = C93FCA051FB61BA100BE1FE7 /* background_stone.png */; };
 		C99867C41FAB7BC300B18087 /* Rock_Block.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C31FAB7BC300B18087 /* Rock_Block.png */; };
 		C99867C81FAB974800B18087 /* background_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C71FAB974800B18087 /* background_wood.png */; };
-		C99867CD1FAB995800B18087 /* background_stone.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CB1FAB995800B18087 /* background_stone.png */; };
 		C99867CE1FAB995800B18087 /* background_brick.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CC1FAB995800B18087 /* background_brick.png */; };
 		C99867D01FAB9E2600B18087 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CF1FAB9E2600B18087 /* Check.png */; };
 		C99867D21FAB9E3300B18087 /* Checkrotated.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867D11FAB9E3300B18087 /* Checkrotated.png */; };
@@ -73,8 +73,7 @@
 		6F07F8E81FA7ED950001888A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		6F07F8E91FA7ED950001888A /* Spike right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spike right.png"; sourceTree = "<group>"; };
 		6F34707F1FAA2AAF005C2FF8 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
-		6F3470801FAA2AAF005C2FF8 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = SOURCE_ROOT; };
-		6F6771581FB0D65C007CB528 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brick.png; path = "../../../App project stuff/brick.png"; sourceTree = "<group>"; };
+		6F3470801FAA2AAF005C2FF8 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = SOURCE_ROOT; };
 		6F67715A1FB0DAD2007CB528 /* ViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
 		6F67715C1FB0DADD007CB528 /* ViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
 		6FA2B1431F82F57D00506CC8 /* What Should We Name It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Should We Name It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,10 +92,11 @@
 		6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_Should_We_Name_ItUITests.swift; sourceTree = "<group>"; };
 		6FA2B16E1F82F57D00506CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
-		C99867BF1FAA2CF000B18087 /* Template.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Template.txt; sourceTree = "<group>"; };
+		C93F88D21FB379E50055144A /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brick.png; path = ../../../../Desktop/brick.png; sourceTree = "<group>"; };
+		C93F88D41FB37CE40055144A /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		C93FCA051FB61BA100BE1FE7 /* background_stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_stone.png; path = ../../../../Desktop/background_stone.png; sourceTree = "<group>"; };
 		C99867C31FAB7BC300B18087 /* Rock_Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock_Block.png; sourceTree = "<group>"; };
 		C99867C71FAB974800B18087 /* background_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_wood.png; sourceTree = "<group>"; };
-		C99867CB1FAB995800B18087 /* background_stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_stone.png; sourceTree = "<group>"; };
 		C99867CC1FAB995800B18087 /* background_brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_brick.png; sourceTree = "<group>"; };
 		C99867CF1FAB9E2600B18087 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
 		C99867D11FAB9E3300B18087 /* Checkrotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkrotated.png; sourceTree = "<group>"; };
@@ -193,12 +193,13 @@
 				C99867C71FAB974800B18087 /* background_wood.png */,
 				6F07F8E31FA7ED940001888A /* hole.png */,
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
-				6F3470801FAA2AAF005C2FF8 /* level2.txt */,
+				6F3470801FAA2AAF005C2FF8 /* level3.txt */,
 				6F07F8E81FA7ED950001888A /* player.png */,
-				6F6771581FB0D65C007CB528 /* brick.png */,
 				6F07F8E41FA7ED940001888A /* Spike bottom.png */,
 				C99867CC1FAB995800B18087 /* background_brick.png */,
-				C99867CB1FAB995800B18087 /* background_stone.png */,
+				C93F88D41FB37CE40055144A /* level2.txt */,
+				C93F88D21FB379E50055144A /* brick.png */,
+				C93FCA051FB61BA100BE1FE7 /* background_stone.png */,
 				6F07F8E61FA7ED950001888A /* Spike left.png */,
 				C99867C31FAB7BC300B18087 /* Rock_Block.png */,
 				6F07F8E91FA7ED950001888A /* Spike right.png */,
@@ -206,7 +207,6 @@
 				C99867CF1FAB9E2600B18087 /* Check.png */,
 				C99867D11FAB9E3300B18087 /* Checkrotated.png */,
 				6F07F8D91FA7ED8A0001888A /* block.png */,
-				C99867BF1FAA2CF000B18087 /* Template.txt */,
 				6F07F8DC1FA7ED8B0001888A /* crack1.png */,
 				6F07F8DD1FA7ED8B0001888A /* crack2.png */,
 				6F07F8DB1FA7ED8B0001888A /* crack3.png */,
@@ -332,18 +332,16 @@
 				6F07F8EF1FA7ED960001888A /* player.png in Resources */,
 				6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */,
 				6F07F8DE1FA7ED8B0001888A /* block.png in Resources */,
+				C93FCA061FB61BA200BE1FE7 /* background_stone.png in Resources */,
 				6F07F8EB1FA7ED960001888A /* Spike bottom.png in Resources */,
 				6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */,
 				6F07F8EA1FA7ED960001888A /* hole.png in Resources */,
 				6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */,
-				C99867C01FAA2CF000B18087 /* Template.txt in Resources */,
-				6F3470821FAA2AAF005C2FF8 /* level2.txt in Resources */,
+				6F3470821FAA2AAF005C2FF8 /* level3.txt in Resources */,
 				C99867D21FAB9E3300B18087 /* Checkrotated.png in Resources */,
 				6F07F8EE1FA7ED960001888A /* header.png in Resources */,
-				6F6771591FB0D65C007CB528 /* brick.png in Resources */,
 				6F07F8F01FA7ED960001888A /* Spike right.png in Resources */,
 				6F07F8ED1FA7ED960001888A /* Spike left.png in Resources */,
-				C99867CD1FAB995800B18087 /* background_stone.png in Resources */,
 				F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */,
 				C99867C41FAB7BC300B18087 /* Rock_Block.png in Resources */,
 				C99867CE1FAB995800B18087 /* background_brick.png in Resources */,
@@ -352,6 +350,8 @@
 				C99867D01FAB9E2600B18087 /* Check.png in Resources */,
 				6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */,
 				C66813721FA0E9E200627B7B /* level1.txt in Resources */,
+				C93F88D51FB37CE40055144A /* level2.txt in Resources */,
+				C93F88D31FB379E50055144A /* brick.png in Resources */,
 				6F07F8E11FA7ED8B0001888A /* crack1.png in Resources */,
 				6F07F8E21FA7ED8B0001888A /* crack2.png in Resources */,
 				6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */,
@@ -543,7 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = 535HM56T69;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -559,7 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = 535HM56T69;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
