@@ -387,11 +387,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             save.set(death, forKey: "olddeath")
         } else if node.name == "Check" {
             player.physicsBody?.isDynamic = false
-            let move = SKAction.move(to: node.position, duration: 0.25)
-            let scale = SKAction.scale(to: 0.000001, duration: 0.5)
-            let remove = SKAction.removeFromParent()
-            let sequence = SKAction.sequence([move, scale, remove])
-            player.run(sequence) {[unowned self] in
+            player.zPosition = 101
+            let scalep = SKAction.scale(to: 75, duration: 1.0)
+            player.run(scalep) {[unowned self] in
                 self.level += 1
                 self.removeAllChildren()
                 self.buildLevel(levels: "level\(self.level)")

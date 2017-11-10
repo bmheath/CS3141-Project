@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BrB-VE-kgv">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="What_Should_We_Name_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -31,59 +32,78 @@
             <objects>
                 <viewController id="A48-IW-tqb" customClass="ViewOne" customModule="What_Should_We_Name_It" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KvH-oq-h9L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-6g-c9W">
-                                <rect key="frame" x="16" y="371" width="126" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-6g-c9W">
+                                <rect key="frame" x="80" y="389" width="160" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="126" id="yp0-gK-opb"/>
+                                    <constraint firstAttribute="width" secondItem="gkD-6g-c9W" secondAttribute="height" multiplier="160:57" id="1pM-lH-WXZ"/>
                                 </constraints>
-                                <state key="normal" title="New Game"/>
+                                <state key="normal" title="New Game" backgroundImage="buttonback.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="New:" destination="A48-IW-tqb" eventType="touchUpInside" id="BEL-Xt-Bbt"/>
                                     <segue destination="PP5-Ic-5d2" kind="show" id="wcW-7Z-vvT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-X4-8ZX">
-                                <rect key="frame" x="150" y="371" width="154" height="30"/>
-                                <state key="normal" title="Continue Game"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-X4-8ZX">
+                                <rect key="frame" x="80" y="479" width="160" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wwF-X4-8ZX" secondAttribute="height" multiplier="20:7" id="hZY-Nj-chM"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Continue Game" backgroundImage="buttonback.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="Con:" destination="A48-IW-tqb" eventType="touchUpInside" id="cqt-Nd-Dm1"/>
                                     <segue destination="PP5-Ic-5d2" kind="show" id="Y9e-hx-TVS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundmenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wi8-mk-pJX">
+                                <rect key="frame" x="-52" y="64" width="408" height="504"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gkD-6g-c9W" firstAttribute="baseline" secondItem="wwF-X4-8ZX" secondAttribute="baseline" id="0t3-g4-H82"/>
-                            <constraint firstItem="wwF-X4-8ZX" firstAttribute="trailing" secondItem="KvH-oq-h9L" secondAttribute="trailingMargin" id="Fca-k2-pb2"/>
-                            <constraint firstItem="gkD-6g-c9W" firstAttribute="leading" secondItem="KvH-oq-h9L" secondAttribute="leadingMargin" id="Hhk-XJ-uaj"/>
-                            <constraint firstItem="gkD-6g-c9W" firstAttribute="top" secondItem="39c-ci-1EC" secondAttribute="top" constant="307" id="d6D-vM-maz"/>
-                            <constraint firstItem="wwF-X4-8ZX" firstAttribute="leading" secondItem="gkD-6g-c9W" secondAttribute="trailing" constant="8" id="d7N-vA-yMj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wi8-mk-pJX" secondAttribute="trailing" constant="-52" id="0Iz-NA-Xwz"/>
+                            <constraint firstItem="39c-ci-1EC" firstAttribute="trailing" secondItem="gkD-6g-c9W" secondAttribute="trailing" constant="80" id="2iD-Tb-BGA"/>
+                            <constraint firstItem="39c-ci-1EC" firstAttribute="bottom" secondItem="wwF-X4-8ZX" secondAttribute="bottom" constant="33" id="9j7-Hf-lEg"/>
+                            <constraint firstItem="Wi8-mk-pJX" firstAttribute="top" secondItem="39c-ci-1EC" secondAttribute="top" id="DRK-8Q-C96"/>
+                            <constraint firstItem="wwF-X4-8ZX" firstAttribute="top" secondItem="gkD-6g-c9W" secondAttribute="bottom" constant="33" id="OQD-kM-xi0"/>
+                            <constraint firstItem="Wi8-mk-pJX" firstAttribute="bottom" secondItem="39c-ci-1EC" secondAttribute="bottom" id="PNX-0l-UGf"/>
+                            <constraint firstItem="Wi8-mk-pJX" firstAttribute="leading" secondItem="KvH-oq-h9L" secondAttribute="leadingMargin" constant="-68" id="WXH-7m-O6x"/>
+                            <constraint firstItem="39c-ci-1EC" firstAttribute="trailing" secondItem="wwF-X4-8ZX" secondAttribute="trailing" constant="80" id="eUe-yt-Lxk"/>
+                            <constraint firstItem="gkD-6g-c9W" firstAttribute="leading" secondItem="39c-ci-1EC" secondAttribute="leading" constant="80" id="rJ1-cm-Nff"/>
+                            <constraint firstItem="wwF-X4-8ZX" firstAttribute="leading" secondItem="39c-ci-1EC" secondAttribute="leading" constant="80" id="yvA-eX-xBt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="39c-ci-1EC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Balls And Holes" id="kUt-fN-7wM"/>
                     <connections>
                         <outlet property="con" destination="wwF-X4-8ZX" id="TaD-15-8ZX"/>
+                        <outlet property="image" destination="Wi8-mk-pJX" id="MCr-NR-wDo"/>
                         <outlet property="new" destination="gkD-6g-c9W" id="ubE-e6-Z63"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHy-P6-DHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1160.625" y="72.5"/>
+            <point key="canvasLocation" x="-1162.5" y="70.774647887323951"/>
         </scene>
         <!--Balls And Holes-->
         <scene sceneID="Wl6-d3-fKc">
             <objects>
                 <viewController id="PP5-Ic-5d2" customClass="ViewTwo" customModule="What_Should_We_Name_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WFJ-qQ-37h">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIb-so-0A9">
-                                <rect key="frame" x="141" y="347" width="39" height="30"/>
+                                <rect key="frame" x="141" y="391" width="38" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="show" id="DXS-lo-gGb"/>
@@ -124,6 +144,10 @@
             <point key="canvasLocation" x="-1928" y="73"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundmenu.png" width="400" height="600"/>
+        <image name="buttonback.png" width="164" height="55"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Y9e-hx-TVS"/>
     </inferredMetricsTieBreakers>

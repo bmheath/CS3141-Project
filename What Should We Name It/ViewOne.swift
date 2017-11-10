@@ -11,6 +11,7 @@ import UIKit
 class ViewOne: UIViewController {
     @IBOutlet weak var new: UIButton!
     @IBOutlet weak var con: UIButton!
+    @IBOutlet weak var image: UIImageView!
     @IBAction func New(_ sender: Any) {
         save.set(save.integer(forKey: "death"), forKey: "olddeath")
         save.set(save.integer(forKey: "level"), forKey: "oldlevel")
@@ -24,5 +25,6 @@ class ViewOne: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.sendSubview(toBack: image)
     }
 }
