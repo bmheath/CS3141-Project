@@ -25,6 +25,8 @@
 		6F67715B1FB0DAD2007CB528 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715A1FB0DAD2007CB528 /* ViewOne.swift */; };
 		6F67715D1FB0DADD007CB528 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715C1FB0DADD007CB528 /* ViewTwo.swift */; };
 		6F8DEAC51FB6181700C3245C /* buttonback.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8DEAC41FB6181600C3245C /* buttonback.png */; };
+		6F92662E1FBA0B280038F180 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F92662D1FBA0B270038F180 /* wood.png */; };
+		6F9266301FBA11710038F180 /* woodbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F92662F1FBA11700038F180 /* woodbutton.png */; };
 		6FA2B1471F82F57D00506CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */; };
 		6FA2B1491F82F57D00506CC8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B1481F82F57D00506CC8 /* GameScene.sks */; };
 		6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2B14A1F82F57D00506CC8 /* Actions.sks */; };
@@ -81,6 +83,8 @@
 		6F67715A1FB0DAD2007CB528 /* ViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
 		6F67715C1FB0DADD007CB528 /* ViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
 		6F8DEAC41FB6181600C3245C /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonback.png; path = "../../../App project stuff/buttonback.png"; sourceTree = "<group>"; };
+		6F92662D1FBA0B270038F180 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood.png; path = "../../../App project stuff/wood.png"; sourceTree = "<group>"; };
+		6F92662F1FBA11700038F180 /* woodbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = woodbutton.png; path = "../../../App project stuff/woodbutton.png"; sourceTree = "<group>"; };
 		6FA2B1431F82F57D00506CC8 /* What Should We Name It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Should We Name It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B1461F82F57D00506CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA2B1481F82F57D00506CC8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -199,11 +203,13 @@
 				6F07F8E31FA7ED940001888A /* hole.png */,
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
 				6F3470801FAA2AAF005C2FF8 /* level3.txt */,
+				6F92662D1FBA0B270038F180 /* wood.png */,
 				6FB34D281FB152F300AE3F04 /* backgroundmenu.png */,
 				6F07F8E81FA7ED950001888A /* player.png */,
 				6F2889DC1FB6210E002B3FD3 /* background_stone.png */,
 				6F07F8E41FA7ED940001888A /* Spike bottom.png */,
 				C99867CC1FAB995800B18087 /* background_brick.png */,
+				6F92662F1FBA11700038F180 /* woodbutton.png */,
 				C93F88D41FB37CE40055144A /* level2.txt */,
 				6F2889DA1FB620B7002B3FD3 /* brick.png */,
 				6F07F8E61FA7ED950001888A /* Spike left.png */,
@@ -336,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F07F8EF1FA7ED960001888A /* player.png in Resources */,
+				6F9266301FBA11710038F180 /* woodbutton.png in Resources */,
 				6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */,
 				6F07F8DE1FA7ED8B0001888A /* block.png in Resources */,
 				6F07F8EB1FA7ED960001888A /* Spike bottom.png in Resources */,
@@ -361,6 +368,7 @@
 				C93F88D51FB37CE40055144A /* level2.txt in Resources */,
 				6F07F8E11FA7ED8B0001888A /* crack1.png in Resources */,
 				6F07F8E21FA7ED8B0001888A /* crack2.png in Resources */,
+				6F92662E1FBA0B280038F180 /* wood.png in Resources */,
 				6FA2B14B1F82F57D00506CC8 /* Actions.sks in Resources */,
 				6FB34D291FB152F300AE3F04 /* backgroundmenu.png in Resources */,
 				6F07F8EC1FA7ED960001888A /* Spike top.png in Resources */,

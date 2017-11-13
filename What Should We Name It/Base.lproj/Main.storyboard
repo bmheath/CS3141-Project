@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Papyrus.ttc">
+            <string>Papyrus</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -39,6 +44,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gkD-6g-c9W" secondAttribute="height" multiplier="160:57" id="1pM-lH-WXZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <state key="normal" title="New Game" backgroundImage="buttonback.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,6 +59,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wwF-X4-8ZX" secondAttribute="height" multiplier="20:7" id="hZY-Nj-chM"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Continue Game" backgroundImage="buttonback.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,22 +108,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIb-so-0A9">
-                                <rect key="frame" x="87" y="380" width="146" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start" backgroundImage="buttonback.png">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIb-so-0A9">
+                                <rect key="frame" x="87" y="365" width="146" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FIb-so-0A9" secondAttribute="height" multiplier="146:55" id="XFc-7W-jIy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
+                                <state key="normal" title="Start" backgroundImage="woodbutton.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="show" id="DXS-lo-gGb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIW-q9-j7r">
+                                <rect key="frame" x="8" y="282" width="304" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pIW-q9-j7r" secondAttribute="height" multiplier="304:35" id="z8W-Hb-yin"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHR-SE-TVS">
+                                <rect key="frame" x="8" y="201" width="304" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nHR-SE-TVS" secondAttribute="height" multiplier="304:35" id="DKY-aX-nsf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mq2-rJ-11P">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mq2-rJ-11P" firstAttribute="top" secondItem="EbN-wy-RRL" secondAttribute="top" id="8lF-Oj-7zh"/>
+                            <constraint firstItem="EbN-wy-RRL" firstAttribute="trailing" secondItem="pIW-q9-j7r" secondAttribute="trailing" constant="8" id="JVC-zc-7Or"/>
+                            <constraint firstItem="Mq2-rJ-11P" firstAttribute="centerX" secondItem="nHR-SE-TVS" secondAttribute="centerX" id="KhJ-RO-5qt"/>
+                            <constraint firstItem="EbN-wy-RRL" firstAttribute="trailing" secondItem="nHR-SE-TVS" secondAttribute="trailing" constant="8" id="MXg-Gq-Fje"/>
+                            <constraint firstItem="EbN-wy-RRL" firstAttribute="trailing" secondItem="FIb-so-0A9" secondAttribute="trailing" constant="87" id="R6o-iq-xEB"/>
+                            <constraint firstItem="nHR-SE-TVS" firstAttribute="top" secondItem="EbN-wy-RRL" secondAttribute="top" constant="137" id="U83-sO-lqn"/>
+                            <constraint firstItem="pIW-q9-j7r" firstAttribute="leading" secondItem="EbN-wy-RRL" secondAttribute="leading" constant="8" id="ZqD-DW-vZY"/>
+                            <constraint firstItem="Mq2-rJ-11P" firstAttribute="centerX" secondItem="pIW-q9-j7r" secondAttribute="centerX" id="auh-bb-OnI"/>
+                            <constraint firstItem="Mq2-rJ-11P" firstAttribute="centerX" secondItem="FIb-so-0A9" secondAttribute="centerX" id="dvv-ju-dvR"/>
+                            <constraint firstItem="nHR-SE-TVS" firstAttribute="leading" secondItem="EbN-wy-RRL" secondAttribute="leading" constant="8" id="heY-9d-jim"/>
+                            <constraint firstItem="Mq2-rJ-11P" firstAttribute="leading" secondItem="WFJ-qQ-37h" secondAttribute="leading" id="jxQ-PK-Chr"/>
+                            <constraint firstItem="pIW-q9-j7r" firstAttribute="top" secondItem="nHR-SE-TVS" secondAttribute="bottom" constant="46" id="lQF-yX-glb"/>
+                            <constraint firstItem="FIb-so-0A9" firstAttribute="leading" secondItem="EbN-wy-RRL" secondAttribute="leading" constant="87" id="ndl-T9-CS9"/>
+                            <constraint firstItem="Mq2-rJ-11P" firstAttribute="bottom" secondItem="EbN-wy-RRL" secondAttribute="bottom" id="pOY-4u-xaD"/>
+                            <constraint firstAttribute="trailing" secondItem="Mq2-rJ-11P" secondAttribute="trailing" id="vxt-SJ-TlJ"/>
+                            <constraint firstItem="FIb-so-0A9" firstAttribute="top" secondItem="pIW-q9-j7r" secondAttribute="bottom" constant="48" id="xiZ-vZ-Qrq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EbN-wy-RRL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Balls And Holes" id="imw-ZQ-wM3"/>
                     <connections>
+                        <outlet property="deathlab" destination="pIW-q9-j7r" id="VIr-Gy-2TD"/>
+                        <outlet property="image" destination="Mq2-rJ-11P" id="HeB-iw-DSn"/>
+                        <outlet property="levelLab" destination="nHR-SE-TVS" id="LK8-ZN-NVT"/>
                         <outlet property="start" destination="FIb-so-0A9" id="qNN-64-EuT"/>
                     </connections>
                 </viewController>
@@ -144,6 +196,8 @@
     <resources>
         <image name="backgroundmenu.png" width="400" height="600"/>
         <image name="buttonback.png" width="164" height="55"/>
+        <image name="wood.png" width="525" height="525"/>
+        <image name="woodbutton.png" width="100" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Y9e-hx-TVS"/>
