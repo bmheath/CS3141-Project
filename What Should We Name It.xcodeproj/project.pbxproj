@@ -44,6 +44,9 @@
 		C99867CE1FAB995800B18087 /* background_brick.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CC1FAB995800B18087 /* background_brick.png */; };
 		C99867D01FAB9E2600B18087 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867CF1FAB9E2600B18087 /* Check.png */; };
 		C99867D21FAB9E3300B18087 /* Checkrotated.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867D11FAB9E3300B18087 /* Checkrotated.png */; };
+		C9CE75851FBB6099007206A1 /* Death_Spikes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */; };
+		C9CE75871FBB60A1007206A1 /* Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE75861FBB60A0007206A1 /* Win.mp3 */; };
+		C9CE75891FBB60AC007206A1 /* Death_Holes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */; };
 		F51334411F9025650091A18B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51334401F9025650091A18B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +111,9 @@
 		C99867CC1FAB995800B18087 /* background_brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_brick.png; sourceTree = "<group>"; };
 		C99867CF1FAB9E2600B18087 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
 		C99867D11FAB9E3300B18087 /* Checkrotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkrotated.png; sourceTree = "<group>"; };
+		C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Death_Spikes.mp3; path = ../../../../../Desktop/Death_Spikes.mp3; sourceTree = "<group>"; };
+		C9CE75861FBB60A0007206A1 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Win.mp3; path = ../../../../../Desktop/Win.mp3; sourceTree = "<group>"; };
+		C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Death_Holes.mp3; path = ../../../../../Downloads/Death_Holes.mp3; sourceTree = "<group>"; };
 		F51334401F9025650091A18B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,7 +213,10 @@
 				6F07F8E31FA7ED940001888A /* hole.png */,
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
 				6F3470801FAA2AAF005C2FF8 /* level3.txt */,
+				C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */,
+				C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */,
 				6FB34D281FB152F300AE3F04 /* backgroundmenu.png */,
+				C9CE75861FBB60A0007206A1 /* Win.mp3 */,
 				6F07F8E81FA7ED950001888A /* player.png */,
 				6F07F8E41FA7ED940001888A /* Spike bottom.png */,
 				C99867CC1FAB995800B18087 /* background_brick.png */,
@@ -341,8 +350,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CE75871FBB60A1007206A1 /* Win.mp3 in Resources */,
 				6F07F8EF1FA7ED960001888A /* player.png in Resources */,
 				6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */,
+				C9CE75851FBB6099007206A1 /* Death_Spikes.mp3 in Resources */,
 				6F07F8DE1FA7ED8B0001888A /* block.png in Resources */,
 				6F07F8EB1FA7ED960001888A /* Spike bottom.png in Resources */,
 				6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */,
@@ -360,6 +371,7 @@
 				C99867CE1FAB995800B18087 /* background_brick.png in Resources */,
 				C99867C81FAB974800B18087 /* background_wood.png in Resources */,
 				6F07F8E01FA7ED8B0001888A /* crack3.png in Resources */,
+				C9CE75891FBB60AC007206A1 /* Death_Holes.mp3 in Resources */,
 				6F8DEAC51FB6181700C3245C /* buttonback.png in Resources */,
 				C99867D01FAB9E2600B18087 /* Check.png in Resources */,
 				6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */,
@@ -559,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = 535HM56T69;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKN7EA73XG;
+				DEVELOPMENT_TEAM = 535HM56T69;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
