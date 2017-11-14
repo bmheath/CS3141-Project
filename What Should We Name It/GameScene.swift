@@ -9,10 +9,24 @@
 import SpriteKit
 import GameplayKit
 import CoreMotion
+import AVFoundation
 
 var playerX = 0;
 var playerY = 0;
 let save = UserDefaults.standard
+
+var HoleDeathEffet: AVAudioPlayer?
+var SpikeDeathEffect: AVAudioPlayer?
+var WinEffect: AVAudioPlayer?
+
+let path1 = Bundle.main.path(forResource: "Death_Holes.mp3", ofType:nil)!
+let url1 = URL(fileURLWithPath: path1)
+
+let path2 = Bundle.main.path(forResource: "Death_Spikes.mp3", ofType:nil)!
+let url2 = URL(fileURLWithPath: path2)
+
+let path3 = Bundle.main.path(forResource: "Win.mp3", ofType:nil)!
+let url3 = URL(fileURLWithPath: path3)
 
 // Starts an enum for different types of collisions (In Progress)
 enum CollisionTypes: UInt32 {
@@ -345,6 +359,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //what happens when things collide
     func playerCollided(with node: SKNode) {
         if node.name == "Spike" {
+            do {
+                SpikeDeathEffect = try AVAudioPlayer(contentsOf: url2)
+                SpikeDeathEffect?.play()
+            } catch {
+                // couldn't load file :(
+            }
             death += 1
             let position = player.position
             let scale = SKAction.scale(to: 1, duration: 0.05)
@@ -374,6 +394,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             save.set(death, forKey: "olddeath")
             self.createPlayer(x: playerX, y: playerY)
         } else if node.name == "Hole" {
+            do {
+                HoleDeathEffet = try AVAudioPlayer(contentsOf: url1)
+                HoleDeathEffet?.play()
+            } catch {
+                // couldn't load file :(
+            }
             player.physicsBody?.isDynamic = false
             let move = SKAction.move(to: node.position, duration: 0.25)
             let scale = SKAction.scale(to: 0.000001, duration: 0.5)
@@ -386,6 +412,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             save.set(death, forKey: "death")
             save.set(death, forKey: "olddeath")
         } else if node.name == "Check" {
+            do {
+                WinEffect = try AVAudioPlayer(contentsOf: url3)
+                WinEffect?.play()
+            } catch {
+                // couldn't load file :(
+            }
             player.physicsBody?.isDynamic = false
             player.zPosition = 101
             let scalep = SKAction.scale(to: 75, duration: 1.0)

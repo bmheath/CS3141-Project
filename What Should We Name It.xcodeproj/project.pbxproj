@@ -80,7 +80,7 @@
 		6F3470801FAA2AAF005C2FF8 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = SOURCE_ROOT; };
 		6F67715A1FB0DAD2007CB528 /* ViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
 		6F67715C1FB0DADD007CB528 /* ViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
-		6F8DEAC41FB6181600C3245C /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonback.png; path = "../../../App project stuff/buttonback.png"; sourceTree = "<group>"; };
+		6F8DEAC41FB6181600C3245C /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonback.png; sourceTree = "<group>"; };
 		6F9266351FBA16750038F180 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
 		6F9266371FBA16850038F180 /* woodbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodbutton.png; sourceTree = "<group>"; };
 		6F9266471FBA17920038F180 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		6FA2B1681F82F57D00506CC8 /* What Should We Name ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What Should We Name ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2B16C1F82F57D00506CC8 /* What_Should_We_Name_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_Should_We_Name_ItUITests.swift; sourceTree = "<group>"; };
 		6FA2B16E1F82F57D00506CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FB34D281FB152F300AE3F04 /* backgroundmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundmenu.png; path = "../../../App project stuff/backgroundmenu.png"; sourceTree = "<group>"; };
+		6FB34D281FB152F300AE3F04 /* backgroundmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundmenu.png; sourceTree = "<group>"; };
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
 		C93F88D41FB37CE40055144A /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		C99867C31FAB7BC300B18087 /* Rock_Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock_Block.png; sourceTree = "<group>"; };
