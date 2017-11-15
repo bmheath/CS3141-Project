@@ -37,6 +37,7 @@ enum CollisionTypes: UInt32 {
     case hole = 5
     case header = 6
     case finish = 7
+    
 }
 
 //Class declares the different types of sprites along with the tilt controls for the game scene
@@ -54,6 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var c3: SKSpriteNode!
     var block: SKSpriteNode!
     var header: SKSpriteNode!
+    var enemy: SKSpriteNode!
     
     var SKSpriteNode_1 = SKSpriteNode()
     var SKSpriteNode_2 = SKSpriteNode()
@@ -116,42 +118,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for line in lines! {
             var x = -352
             for c in line{
-                 switch c {
+                switch c {     // based on the character read load a different object into the game
                     
-                case "x":
+                case "x":                                  // x - z = wall/block obstacles
                     createObstacle(x: x, y: y,texture:0)
-                
+                    
                 case "y":
                     createObstacle(x: x, y: y,texture:1)
                     
                 case "z":
                     createObstacle(x: x, y: y,texture:2)
-                
-                case "o":
+                    
+                case "o":                                // o = hole
                     createHole(x: x, y: y)
                     
-                 case "l":
+                case "l":                               // l = spike pointing left
                     createLSpike(x: x - 18, y: y)
                     
-                 case "r":
+                case "r":                               // r = spike pointing right
                     createRSpike(x: x + 18, y: y)
                     
-                 case "h":
+                case "h":                               //  h = header fil
                     createheader(x: x + 352, y: y)
                     
-                 case "t":
+                case "t":                               // t = spike pointing down
                     createTSpike(x: x, y: y + 18)
                     
-                 case "b":
+                case "b":                               // b = spike pointing up
                     createBSpike(x: x, y: y - 18)
                     
-                 case "f":
+                case "f":                               // f = finish line horizontal
                     createFinish(x: x, y: y ,orientation:0)
                     
-                 case "g":
+                case "g":                                // g = finish line vertical
                     createFinish(x: x, y: y ,orientation:1)
-                
-                 case "0":
+                    
+                case "0":                                 // 0 = game will have wood background
                     back = SKSpriteNode(imageNamed: "background_wood")
                     
                  case "1":
@@ -165,15 +167,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     playerY = y
                     createPlayer(x: x, y: y)
                     
-                case ",":
-                    print("_", terminator: "")
-                    
+    
                 case "n":
-                    print("newline")
                     break
                     
                 default:
-                    print("done")
+                    break
                 }
                 x += 64
             }
@@ -346,6 +345,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hole.zPosition = -1
         addChild(hole)
     }
+    
+    
+    func createEnemy(x: Int ,y: Int){
+        let leftWall = -352
+        let rightWall = 352
+        
+        let moveThere = SKAction.move(to: CGPoint(x:leftWall, y:y), duration: 2)
+        let movingback = SKAction.move(to: CGPoint(x:rightWall, y:y), duration: 2)
+        
+        let moveAndMoveBack = SKAction.sequence([moveThere, movingback])
+        
+        let repeatForEver = SKAction.repeatForever(moveAndMoveBack)
+        
+    
+        enemy = SKSpriteNode(imageNamed: "player")
+        enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
+        enemy.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
+        enemy.position = CGPoint(x: x, y: y)
+        enemy.physicsBody?.isDynamic = false
+        enemy.physicsBody?.categoryBitMask = CollisionTypes.spike.rawValue
+        enemy.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
+        enemy.physicsBody?.collisionBitMask = 0
+        enemy.zPosition=1
+        enemy.run(repeatForEver)
+        self.addChild(enemy)
+        
+    }
+    
     
     //Tells if things touch eachother
     func didBegin(_ contact: SKPhysicsContact) {
