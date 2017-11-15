@@ -95,6 +95,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         buildLevel(levels: "level\(level)")
+        if (level == 5){
+            createEnemy()
+        }
         
         SKSpriteNode_1 = self.childNode(withName: "SKSpriteNode_1") as! SKSpriteNode
         SKSpriteNode_2 = self.childNode(withName: "SKSpriteNode_2") as! SKSpriteNode
@@ -110,9 +113,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let levelString = try? String(contentsOfFile: levelPath!)
         let lines = levelString?.components(separatedBy: "\n")
       
-                // x -> 680
-                // y -> 1280
-        
         var y = 645
 
         for line in lines! {
@@ -347,14 +347,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
-    func createEnemy(x: Int ,y: Int){
-        let leftWall = -352
-        let rightWall = 352
+    func createEnemy(){
         
-        let moveThere = SKAction.move(to: CGPoint(x:leftWall, y:y), duration: 2)
-        let movingback = SKAction.move(to: CGPoint(x:rightWall, y:y), duration: 2)
+        // (-288, 390) (-288, -390) () (288, 390)
         
-        let moveAndMoveBack = SKAction.sequence([moveThere, movingback])
+        let x = -288
+        let y = 390
+        
+        let firstMove = SKAction.move(to: CGPoint(x:-288, y: -390), duration: 1)
+        let secondMove = SKAction.move(to: CGPoint(x: 288, y: -390), duration: 1)
+        let thirdMove = SKAction.move(to: CGPoint(x: 288, y: 390), duration: 1)
+        let finalMove = SKAction.move(to: CGPoint(x: -288, y: 390), duration: 1)
+  
+
+        let moveAndMoveBack = SKAction.sequence([firstMove, secondMove, thirdMove, finalMove])
         
         let repeatForEver = SKAction.repeatForever(moveAndMoveBack)
         

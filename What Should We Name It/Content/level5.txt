@@ -1,0 +1,21 @@
+h0,,,,,,,,,,n
+p,,,,,,,,,,,n
+,,,,,,,,,,,,n
+xxxxxxx xxxxn
+x,,,,,,,,,,xn
+x,xx,xxxxx,xn
+x,xx,xxxxx,xn
+x,,,,xxxxx,xn
+x,xxxxxxxx,xn
+x,xxxxxxxx,xn
+x,xxxxxxxx,xn
+x,xxxxxxo,,xn
+x,,oxxxxx,,xn
+x,xxxxxxxx,xn
+x,xxxxxxxx,xn
+x,xx,xxxxx,xn
+x,,,,,,,,,,xn
+xxxxxxxxx,xxn
+x,,,,,,,,,,,n
+x,xxxxxxxxxxn
+x,,,,,,,,,,fn
