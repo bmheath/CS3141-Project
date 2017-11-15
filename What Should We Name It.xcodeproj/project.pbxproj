@@ -22,6 +22,7 @@
 		6F3470821FAA2AAF005C2FF8 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F3470801FAA2AAF005C2FF8 /* level3.txt */; };
 		6F67715B1FB0DAD2007CB528 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715A1FB0DAD2007CB528 /* ViewOne.swift */; };
 		6F67715D1FB0DADD007CB528 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67715C1FB0DADD007CB528 /* ViewTwo.swift */; };
+		6F68B21C1FBCACED00CE089F /* level4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F68B21B1FBCACEC00CE089F /* level4.txt */; };
 		6F8DEAC51FB6181700C3245C /* buttonback.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8DEAC41FB6181600C3245C /* buttonback.png */; };
 		6F9266361FBA16750038F180 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9266351FBA16750038F180 /* wood.png */; };
 		6F9266381FBA16850038F180 /* woodbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9266371FBA16850038F180 /* woodbutton.png */; };
@@ -83,6 +84,7 @@
 		6F3470801FAA2AAF005C2FF8 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = SOURCE_ROOT; };
 		6F67715A1FB0DAD2007CB528 /* ViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
 		6F67715C1FB0DADD007CB528 /* ViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
+		6F68B21B1FBCACEC00CE089F /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level4.txt; path = "../../../CS3141-Project-New/What Should We Name It/Content/level4.txt"; sourceTree = "<group>"; };
 		6F8DEAC41FB6181600C3245C /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonback.png; sourceTree = "<group>"; };
 		6F9266351FBA16750038F180 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
 		6F9266371FBA16850038F180 /* woodbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodbutton.png; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				6F8DEAC41FB6181600C3245C /* buttonback.png */,
 				6F07F8E31FA7ED940001888A /* hole.png */,
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
+				6F68B21B1FBCACEC00CE089F /* level4.txt */,
 				6F3470801FAA2AAF005C2FF8 /* level3.txt */,
 				C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */,
 				C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */,
@@ -370,6 +373,7 @@
 				C99867C41FAB7BC300B18087 /* Rock_Block.png in Resources */,
 				C99867CE1FAB995800B18087 /* background_brick.png in Resources */,
 				C99867C81FAB974800B18087 /* background_wood.png in Resources */,
+				6F68B21C1FBCACED00CE089F /* level4.txt in Resources */,
 				6F07F8E01FA7ED8B0001888A /* crack3.png in Resources */,
 				C9CE75891FBB60AC007206A1 /* Death_Holes.mp3 in Resources */,
 				6F8DEAC51FB6181700C3245C /* buttonback.png in Resources */,
@@ -571,7 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 535HM56T69;
+				DEVELOPMENT_TEAM = FKN7EA73XG;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -587,7 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 535HM56T69;
+				DEVELOPMENT_TEAM = FKN7EA73XG;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
