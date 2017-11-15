@@ -111,9 +111,9 @@
 		C99867CC1FAB995800B18087 /* background_brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_brick.png; sourceTree = "<group>"; };
 		C99867CF1FAB9E2600B18087 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
 		C99867D11FAB9E3300B18087 /* Checkrotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkrotated.png; sourceTree = "<group>"; };
-		C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Death_Spikes.mp3; path = ../../../../../Desktop/Death_Spikes.mp3; sourceTree = "<group>"; };
-		C9CE75861FBB60A0007206A1 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Win.mp3; path = ../../../../../Desktop/Win.mp3; sourceTree = "<group>"; };
-		C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Death_Holes.mp3; path = ../../../../../Downloads/Death_Holes.mp3; sourceTree = "<group>"; };
+		C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Death_Spikes.mp3; sourceTree = "<group>"; };
+		C9CE75861FBB60A0007206A1 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Win.mp3; sourceTree = "<group>"; };
+		C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Death_Holes.mp3; sourceTree = "<group>"; };
 		F51334401F9025650091A18B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
