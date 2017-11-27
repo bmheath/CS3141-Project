@@ -575,11 +575,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 535HM56T69;
+				DEVELOPMENT_TEAM = XKS4D4KVXM;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-js";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -591,11 +591,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 535HM56T69;
+				DEVELOPMENT_TEAM = XKS4D4KVXM;
 				INFOPLIST_FILE = "What Should We Name It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.What-Should-We-Name-It-js";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

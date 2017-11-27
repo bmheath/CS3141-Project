@@ -37,7 +37,7 @@ enum CollisionTypes: UInt32 {
     case hole = 5
     case header = 6
     case finish = 7
-    
+    case enemy = 8
 }
 
 //Class declares the different types of sprites along with the tilt controls for the game scene
@@ -93,9 +93,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Set the file path
         
-        
         buildLevel(levels: "level\(level)")
-        if (level == 5){
+        if (level == 1){
             createEnemy()
         }
         
@@ -366,6 +365,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     
         enemy = SKSpriteNode(imageNamed: "player")
+        enemy.name = "Enemy"
         enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
         enemy.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
         enemy.position = CGPoint(x: x, y: y)
@@ -459,6 +459,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.removeAllChildren()
                 self.buildLevel(levels: "level\(self.level)")
             }
+        }
+        else if node.name == "Enemy" {
+
+            death += 1
+            player.removeFromParent()
+     
+            save.set(death, forKey: "death")
+            save.set(death, forKey: "olddeath")
+            self.createPlayer(x: playerX, y: playerY)
         }
     }
     
