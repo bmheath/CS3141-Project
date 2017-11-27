@@ -336,7 +336,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hole = SKSpriteNode(imageNamed: "hole")
         hole.position = CGPoint(x: x, y: y)
         hole.name = "Hole"
-        hole.physicsBody = SKPhysicsBody(circleOfRadius: hole.size.width / 2)
+        hole.physicsBody = SKPhysicsBody(circleOfRadius: hole.size.width / 5)
         hole.physicsBody?.isDynamic = false
         hole.physicsBody?.categoryBitMask = CollisionTypes.hole.rawValue
         hole.physicsBody?.contactTestBitMask = CollisionTypes.player.rawValue
@@ -353,10 +353,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let x = -288
         let y = 390
         
-        let firstMove = SKAction.move(to: CGPoint(x:-288, y: -390), duration: 1)
-        let secondMove = SKAction.move(to: CGPoint(x: 288, y: -390), duration: 1)
-        let thirdMove = SKAction.move(to: CGPoint(x: 288, y: 390), duration: 1)
-        let finalMove = SKAction.move(to: CGPoint(x: -288, y: 390), duration: 1)
+        let firstMove = SKAction.move(to: CGPoint(x:-288, y: -390), duration: 0.75)
+        let secondMove = SKAction.move(to: CGPoint(x: 288, y: -390), duration: 0.5)
+        let thirdMove = SKAction.move(to: CGPoint(x: 288, y: 390), duration: 0.75)
+        let finalMove = SKAction.move(to: CGPoint(x: -288, y: 390), duration: 0.5)
   
 
         let moveAndMoveBack = SKAction.sequence([firstMove, secondMove, thirdMove, finalMove])

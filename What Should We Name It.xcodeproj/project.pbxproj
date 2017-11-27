@@ -40,6 +40,8 @@
 		6FB34D291FB152F300AE3F04 /* backgroundmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FB34D281FB152F300AE3F04 /* backgroundmenu.png */; };
 		C66567E91FBCAA0900F4084D /* level5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66567E81FBCAA0900F4084D /* level5.txt */; };
 		C66813721FA0E9E200627B7B /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66813711FA0E9E200627B7B /* level1.txt */; };
+		C6D8AC581FCC8561006221A6 /* level4.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6D8AC571FCC8561006221A6 /* level4.txt */; };
+		C6D8AC5A1FCC8575006221A6 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6D8AC591FCC8575006221A6 /* level3.txt */; };
 		C93F88D51FB37CE40055144A /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C93F88D41FB37CE40055144A /* level2.txt */; };
 		C99867C41FAB7BC300B18087 /* Rock_Block.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C31FAB7BC300B18087 /* Rock_Block.png */; };
 		C99867C81FAB974800B18087 /* background_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C71FAB974800B18087 /* background_wood.png */; };
@@ -85,7 +87,7 @@
 		6F3470801FAA2AAF005C2FF8 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = SOURCE_ROOT; };
 		6F67715A1FB0DAD2007CB528 /* ViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
 		6F67715C1FB0DADD007CB528 /* ViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
-		6F68B21B1FBCACEC00CE089F /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level4.txt; path = "../../../CS3141-Project-New/What Should We Name It/Content/level4.txt"; sourceTree = "<group>"; };
+		6F68B21B1FBCACEC00CE089F /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level4.txt; sourceTree = "<group>"; };
 		6F8DEAC41FB6181600C3245C /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonback.png; sourceTree = "<group>"; };
 		6F9266351FBA16750038F180 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
 		6F9266371FBA16850038F180 /* woodbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodbutton.png; sourceTree = "<group>"; };
@@ -109,6 +111,8 @@
 		6FB34D281FB152F300AE3F04 /* backgroundmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundmenu.png; sourceTree = "<group>"; };
 		C66567E81FBCAA0900F4084D /* level5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level5.txt; sourceTree = "<group>"; };
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
+		C6D8AC571FCC8561006221A6 /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level4.txt; sourceTree = "<group>"; };
+		C6D8AC591FCC8575006221A6 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = "<group>"; };
 		C93F88D41FB37CE40055144A /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		C99867C31FAB7BC300B18087 /* Rock_Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock_Block.png; sourceTree = "<group>"; };
 		C99867C71FAB974800B18087 /* background_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_wood.png; sourceTree = "<group>"; };
@@ -217,7 +221,9 @@
 				6F8DEAC41FB6181600C3245C /* buttonback.png */,
 				6F07F8E31FA7ED940001888A /* hole.png */,
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
+				C6D8AC591FCC8575006221A6 /* level3.txt */,
 				6F68B21B1FBCACEC00CE089F /* level4.txt */,
+				C6D8AC571FCC8561006221A6 /* level4.txt */,
 				6F3470801FAA2AAF005C2FF8 /* level3.txt */,
 				C9CE75881FBB60AC007206A1 /* Death_Holes.mp3 */,
 				C9CE75841FBB6099007206A1 /* Death_Spikes.mp3 */,
@@ -361,6 +367,7 @@
 				6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */,
 				C9CE75851FBB6099007206A1 /* Death_Spikes.mp3 in Resources */,
 				6F07F8DE1FA7ED8B0001888A /* block.png in Resources */,
+				C6D8AC5A1FCC8575006221A6 /* level3.txt in Resources */,
 				C66567E91FBCAA0900F4084D /* level5.txt in Resources */,
 				6F07F8EB1FA7ED960001888A /* Spike bottom.png in Resources */,
 				6F3470811FAA2AAF005C2FF8 /* level1.txt in Resources */,
@@ -385,6 +392,7 @@
 				6FA2B1541F82F57D00506CC8 /* Assets.xcassets in Resources */,
 				6F9266361FBA16750038F180 /* wood.png in Resources */,
 				C66813721FA0E9E200627B7B /* level1.txt in Resources */,
+				C6D8AC581FCC8561006221A6 /* level4.txt in Resources */,
 				C93F88D51FB37CE40055144A /* level2.txt in Resources */,
 				6F07F8E11FA7ED8B0001888A /* crack1.png in Resources */,
 				6F07F8E21FA7ED8B0001888A /* crack2.png in Resources */,
