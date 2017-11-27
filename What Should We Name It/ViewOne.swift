@@ -16,7 +16,7 @@ class ViewOne: UIViewController {
         save.set(save.integer(forKey: "death"), forKey: "olddeath")
         save.set(save.integer(forKey: "level"), forKey: "oldlevel")
         save.set(0, forKey: "death")
-        save.set(4, forKey: "level")
+        save.set(1, forKey: "level")
     }
     @IBAction func Con(_ sender: Any) {
         save.set(save.integer(forKey: "olddeath"), forKey: "death")
