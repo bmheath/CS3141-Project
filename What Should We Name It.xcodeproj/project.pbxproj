@@ -42,6 +42,7 @@
 		C66813721FA0E9E200627B7B /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66813711FA0E9E200627B7B /* level1.txt */; };
 		C6D8AC581FCC8561006221A6 /* level4.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6D8AC571FCC8561006221A6 /* level4.txt */; };
 		C6D8AC5A1FCC8575006221A6 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6D8AC591FCC8575006221A6 /* level3.txt */; };
+		C6D8AC5C1FCC942C006221A6 /* moving.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D8AC5B1FCC942C006221A6 /* moving.png */; };
 		C93F88D51FB37CE40055144A /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C93F88D41FB37CE40055144A /* level2.txt */; };
 		C99867C41FAB7BC300B18087 /* Rock_Block.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C31FAB7BC300B18087 /* Rock_Block.png */; };
 		C99867C81FAB974800B18087 /* background_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = C99867C71FAB974800B18087 /* background_wood.png */; };
@@ -113,6 +114,7 @@
 		C66813711FA0E9E200627B7B /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = SOURCE_ROOT; };
 		C6D8AC571FCC8561006221A6 /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level4.txt; sourceTree = "<group>"; };
 		C6D8AC591FCC8575006221A6 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = "<group>"; };
+		C6D8AC5B1FCC942C006221A6 /* moving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moving.png; sourceTree = "<group>"; };
 		C93F88D41FB37CE40055144A /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		C99867C31FAB7BC300B18087 /* Rock_Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock_Block.png; sourceTree = "<group>"; };
 		C99867C71FAB974800B18087 /* background_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_wood.png; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				6F9266471FBA17920038F180 /* brick.png */,
 				6F8DEAC41FB6181600C3245C /* buttonback.png */,
 				6F07F8E31FA7ED940001888A /* hole.png */,
+				C6D8AC5B1FCC942C006221A6 /* moving.png */,
 				6F34707F1FAA2AAF005C2FF8 /* level1.txt */,
 				C6D8AC591FCC8575006221A6 /* level3.txt */,
 				6F68B21B1FBCACEC00CE089F /* level4.txt */,
@@ -364,6 +367,7 @@
 			files = (
 				C9CE75871FBB60A1007206A1 /* Win.mp3 in Resources */,
 				6F07F8EF1FA7ED960001888A /* player.png in Resources */,
+				C6D8AC5C1FCC942C006221A6 /* moving.png in Resources */,
 				6FA2B1521F82F57D00506CC8 /* Main.storyboard in Resources */,
 				C9CE75851FBB6099007206A1 /* Death_Spikes.mp3 in Resources */,
 				6F07F8DE1FA7ED8B0001888A /* block.png in Resources */,

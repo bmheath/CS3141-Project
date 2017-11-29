@@ -364,7 +364,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let repeatForEver = SKAction.repeatForever(moveAndMoveBack)
         
     
-        enemy = SKSpriteNode(imageNamed: "player")
+        enemy = SKSpriteNode(imageNamed: "moving")
         enemy.name = "Enemy"
         enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
         enemy.physicsBody?.categoryBitMask = CollisionTypes.wall.rawValue
